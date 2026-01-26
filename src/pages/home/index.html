@@ -14,14 +14,147 @@
 <!-- Page -->
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
-  <header class="w-full h-10">
+  <header id="header" class="header-wrap group">
+    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
+    <div class="content h-full relative z-7 hidden xl:block">
+      <div class="flex items-center justify-between gap-4 h-full">
+        <nav class="nav-wrap">
+          <a href="#" class="nav-link">Проєкти</a>
+          <a href="#" class="nav-link">Блог</a>
+          <a href="#" class="nav-link">Контакти</a>
+        </nav>
 
+        <a href="#" class="aspect-logo w-logo-lg">
+          <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
+        </a>
+
+        <a href="tel:+380965558832" class="btn-primary">
+          <span class="btn-primary-icon">
+            <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+          </span>
+          <span class="btn-primary-text">+380965558832</span>
+        </a>
+      </div>
+    </div>
+    <div id="header-mobile-content" class="header-mob-wrap">
+      <div class="header-mob-top" id="headerTrigger">
+        <div class="w-logo-sm aspect-logo">
+          <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
+        </div>
+        <button type="button" class="size-12 group-[.mob-open]:hidden flex items-center justify-center">
+          <img src="/img/icons/menu.svg" class="w-full" width="48" height="48" alt="">
+        </button>
+        <button type="button" class="hidden group-[.mob-open]:flex size-12 items-center justify-center">
+          <img src="/img/icons/menu-close.svg" class="w-full" width="48" height="48" alt="">
+        </button>
+      </div>
+      <div class="header-mob-inner">
+        <nav class="nav-wrap w-full">
+          <a href="#" class="nav-link">Проєкти</a>
+          <a href="#" class="nav-link">Блог</a>
+          <a href="#" class="nav-link">Контакти</a>
+        </nav>
+
+        <div class="header-contact">
+          <p class="header-contact-text">Наш Email та номер телефону</p>
+          <a class="header-contact-link" href="tel:+380965558832">+380965558832</a>
+          <a class="header-contact-link" href="mailto:sapunova2025@gmail.com">sapunova2025@gmail.com</a>
+        </div>
+
+        <div class="header-button-wrap">
+          <a href="tel:+380965558832" class="btn-primary --yellow">
+            <span class="btn-primary-icon">
+              <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+            </span>
+            <span class="btn-primary-text">+380965558832</span>
+          </a>
+        </div>
+
+        <div class="header-socials">
+          <a href="#" class="header-socials-item">
+            <span class="sr-only">SAPUNOVA - Facebook</span>
+            <img src="/img/icons/soc-fb.svg" width="44" height="44" alt="Facebook">
+          </a>
+          <a href="#" class="header-socials-item">
+            <span class="sr-only">SAPUNOVA - Instagram</span>
+            <img src="/img/icons/soc-ig.svg" width="44" height="44" alt="Instagram">
+          </a>
+          <a href="#" class="header-socials-item">
+            <span class="sr-only">SAPUNOVA - X</span>
+            <img src="/img/icons/soc-x.svg" width="44" height="44" alt="X (Old Twitter)">
+          </a>
+        </div>
+      </div>
+      <!-- /.header-mob-inner -->
+    </div>
+    <!-- /#header-mobile-content -->
   </header>
   <!-- /Header -->
 
   <!-- Main -->
   <main class="grow w-full">
-
+    <section id="section-hero"
+             class="h-screen min-h-[660px] max-h-[800px] xl:min-h-[810px] xl:max-h-[1200px]">
+      <div class="content px-0 xl:px-0 h-full relative pt-16 xl:pt-33 flex flex-col items-center justify-end">
+        <div class="absolute inset-0 z-1">
+          <div class="w-full h-full bg-foreground/20"
+               id="vid-container">
+            <img src="/img/home/hero-bg.jpg"
+                 class="w-full h-full object-cover"
+                 width="1440"
+                 height="810"
+                 alt="Sapunova">
+          </div>
+        </div>
+        <div class="relative z-3 w-full flex flex-col items-start justify-end py-10 xl:py-18">
+          <div class="absolute z-3 inset-0 bg-linear-to-t from-foreground to-transparent"></div>
+          <div class="w-full max-w-[1215px] relative z-4 px-4 xl:px-14">
+            <h1 class="heading-1 text-white">
+              <span class="text-primary">Стратегія</span> зі змістом <br>
+              Результат для <span class="text-primary">бізнесу</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-hero -->
+    <section id="section-2" class="bg-white text-background-dark py-10 xl:py-20">
+      <div class="content space-y-8 xl:space-y-25">
+        <div class="w-full flex flex-col items-center xl:flex-row xl:justify-between gap-8">
+          <div class="grow w-full">
+            <h2 class="text-h3 xl:text-h3-lg uppercase">
+              Стратегічний консалтинг <span class="xl:hidden">—</span>
+              <br>
+              наша сфера впливу
+            </h2>
+          </div>
+          <div>
+            <a href="#" class="btn-primary --dark">
+              <span class="btn-primary-icon">
+                <img src="/img/icons/btn-arrow-white.svg" width="24" height="24" alt="">
+              </span>
+              <span class="btn-primary-text xl:whitespace-nowrap">Обговорити цілі</span>
+            </a>
+          </div>
+        </div>
+        <div class="w-full flex flex-col items-center xl:flex-row-reverse xl:justify-between gap-6 2xl:gap-25">
+          <div class="aspect-[343/193] w-full max-w-[540px]">
+            <img src="/img/home/section-2.jpg" class="w-full" width="539" height="304" alt="">
+          </div>
+          <div class="space-y-4 w-full grow max-w-[652px]">
+            <p class="text-body-sm xl:text-body-lg text-light-main">
+              Коли народжується новий бізнес, продукт чи напрям, ми допомагаємо вибудувати бізнес-модель, сформувати концепцію, визначити суть і створити бренд, релевантний середовищу, у яке він входить.
+            </p>
+            <p class="text-body-sm xl:text-body-lg text-light-main">
+              Коли компанія зростає, змінює фокус або стикається з кризою, — ми включаємось у стратегічний перехід: працюємо зі структурою, командою та змістом, щоб підтримати розвиток.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-2 -->
   </main>
   <!-- /Main -->
 
@@ -30,6 +163,9 @@
   <!-- Footer -->
 </div>
 <!-- /Page -->
+
+<script type="module" src="/src/shared/scroll.js"></script>
+<script type="module" src="/src/shared/header.js"></script>
 
 <script type="module" src="/src/pages/home/main.js"></script>
 </body>
