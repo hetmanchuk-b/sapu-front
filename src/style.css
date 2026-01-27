@@ -100,6 +100,7 @@
   --spacing-content-max: 1288px;
   --spacing-logo-sm: 123px;
   --spacing-logo-lg: 217px;
+  --spacing-half-lg: 652px;
 
   /* Aspect */
   --aspect-logo: 217/85;
@@ -112,6 +113,22 @@ body {
 
 @utility content {
   @apply w-full mx-auto px-4 xl:px-14 max-w-content-row 2xl:max-w-hd;
+}
+
+@utility page-section {
+  @apply py-10 xl:py-20;
+}
+
+@utility section-title-h4 {
+  @apply text-h4 xl:text-h4-lg uppercase;
+}
+
+@utility section-title-h3 {
+  @apply text-h3 xl:text-h3-lg uppercase;
+}
+
+@utility section-title-h2 {
+  @apply text-h2 xl:text-h2-lg uppercase;
 }
 
 @layer components {
@@ -163,7 +180,7 @@ body {
   }
 
   .nav-link {
-    @apply text-body-md font-medium xl:text-header-field font-secondary text-white;
+    @apply text-body-md font-medium xl:text-header-field font-secondary text-white hover:text-primary;
   }
 
   /* Buttons */
@@ -225,5 +242,16 @@ body {
     }
   }
 
+
+  /* Section */
+  .list-primary {
+    @apply list-none;
+    li {
+      @apply relative py-4 pl-9 not-last:border-b border-dark-stroke-hover xl:text-body-lg text-body-md;
+      &::before {
+        @apply content-[''] size-3 absolute left-0 top-1/2 -translate-y-1/2 bg-primary rounded-full;
+      }
+    }
+  }
 
 }
