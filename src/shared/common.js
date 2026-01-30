@@ -1,3 +1,8 @@
+import LocomotiveScroll from 'locomotive-scroll';
+
+const scroll = new LocomotiveScroll();
+
+
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.getElementById('header');
 

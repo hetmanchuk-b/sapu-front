@@ -215,7 +215,7 @@
                 <h4 class="section-title-h4 transition-colors">Стратегічний аналіз</h4>
               </div>
 
-              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors">
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
                 Ми перетворюємо дані на інсайти, що стають основою вірних рішень.
               </p>
             </div>
@@ -241,7 +241,7 @@
                 <h4 class="section-title-h4 transition-colors">Концепція продукту/послуги</h4>
               </div>
 
-              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors">
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
                 Допомагаємо перевірити життєздатність продукту та відповідність ідеї потребам ринку.
               </p>
             </div>
@@ -267,7 +267,7 @@
                 <h4 class="section-title-h4 transition-colors">Бренд стратегія</h4>
               </div>
 
-              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors">
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
                 Ми створюємо бренд-стратегії, що формують впізнаваність, довіру та відображають реальність бізнесу.
               </p>
             </div>
@@ -299,7 +299,7 @@
                 <h4 class="section-title-h4 transition-colors">Франчайзинг/Масштабування</h4>
               </div>
 
-              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors">
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
                 Створюємо модель масштабування, що зберігає цінність, контролює якість і знижує ризики на кожному етапі.
               </p>
             </div>
@@ -348,7 +348,7 @@
       <div class="content">
         <div class="w-full max-w-lg xl:max-w-full mx-auto flex flex-col xl:flex-row-reverse xl:justify-between gap-6">
           <!-- Img -->
-          <div class="aspect-square w-full xl:w-1/2 max-w-half-lg overflow-hidden rounded-lg">
+          <div class="half-wrap-image">
             <img src="/img/common/section-veteran.jpg"
                  class="w-full h-full object-cover"
                  width="652" height="652" alt="">
@@ -390,7 +390,7 @@
     <!-- /#section-5 -->
 
     <section id="section-contact" class="page-section">
-      <div class="content flex flex-col xl:flex-row max-w-lg xl:max-w-full mx-auto gap-8 xl:gap-6">
+      <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
         <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
           <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
@@ -403,12 +403,108 @@
         <!-- Form -->
         <div class="w-full xl:w-1/2">
           <div class="bg-background-dark-card p-4 xl:py-10 xl:px-14 rounded-lg">
-            <form action="#" class="grid grid-cols-1 xl:grid-cols-2 gap-4">
-              <div>input</div>
-              <div>input</div>
-              <div class="xl:col-span-full">textarea</div>
-              <div class="xl:col-span-full">text</div>
-              <div class="xl:col-span-full">button</div>
+            <form action="" id="questions-form">
+              <div class="sap-form-wrap">
+                <div class="sap-input">
+                  <label class="sap-input-label" for="form-phone">
+                    Номер телефону
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="text"
+                        name="name"
+                        id="form-phone"
+                        placeholder="+380"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний номер телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input">
+                  <label class="sap-input-label" for="form-email">
+                    Email
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="email"
+                        name="email"
+                        id="form-email"
+                        placeholder="alfaromeo@gmail.com"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний Email</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="xl:col-span-full">
+                  <div class="sap-input">
+                    <label class="sap-input-label" for="form-message">
+                      Маєте питання?
+                    </label>
+                    <div class="sap-input-inner">
+                      <textarea
+                          class="sap-input-field"
+                          type="text"
+                          name="message"
+                          id="form-message"
+                          placeholder="Напишіть його тут"
+                      ></textarea>
+                      <button type="button" class="sap-input-clear">
+                        <span class="sr-only">Очистити</span>
+                        <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                      </button>
+                    </div>
+                    <div class="sap-input-error">
+                      <img
+                          src="/img/icons/form-field-warning.svg"
+                          width="16" height="16" alt=""
+                      >
+                      <div class="sap-input-error-text">
+                        <p>Некоректний Email</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="xl:col-span-full">
+                  <p class="sap-form-rules">
+                    Натискаючи «Відправити заявку», ви підтверджуєте, що погоджуєтесь з нашими
+                    <a href="#" class="sap-form-rules-link">Правилами конфіденційності</a>
+                    та
+                    <a href="#" class="sap-form-rules-link">Умовами користування</a>
+                  </p>
+                </div>
+                <div class="xl:col-span-full flex justify-center xl:justify-start">
+                  <button type="submit" class="btn-primary --yellow">
+                    <span class="btn-primary-icon">
+                      <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+                    </span>
+                    <span class="btn-primary-text">Відправити заявку</span>
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -418,21 +514,599 @@
     </section>
     <!-- /#section-contact -->
 
-    <section id="section-7" class="page-section">
-
+    <section id="section-7" class="page-section pb-0">
+      <div class="content --fit">
+        <div class="flex flex-col">
+          <h2 class="section-title-h3">
+            <span class="text-primary">Синергія</span> досвіду та кваліфікації <br>
+            <span class="text-primary">для ваших цілей</span>
+          </h2>
+          <div class="w-full flex justify-center">
+            <img src="/img/icons/arrow-right-down.svg" class="size-25 lg:size-[201px]" width="201" height="201" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
     </section>
     <!-- /#section-7 -->
+    <section id="section-team" class="page-section">
+      <div class="content --fit flex flex-col gap-10 xl:gap-14">
+        <!-- Top -->
+        <div class="flex flex-col gap-6 xl:gap-8 w-full">
+          <p class="text-title-lg xl:text-person-name uppercase">Олена Борисова</p>
+          <div class="flex flex-col xl:flex-row xl:justify-between gap-6">
+            <div class="half-wrap-image">
+              <img src="/img/common/team-host.jpg"
+                   class="w-full h-full object-cover"
+                   width="652" height="652" alt="">
+            </div>
+            <div class="flex flex-col gap-4 xl:gap-6 w-full xl:w-1/2">
+              <h3 class="section-title-h3">
+                Засновниця агенції <br>
+                та менторка
+              </h3>
+              <div class="flex flex-col gap-6 items-start xl:items-start xl:h-full">
+                <ul class="list-primary --no-bullet">
+                  <li>CEO ресторанної компанії GastroFamily</li>
+                  <li>15+ років у бізнесі</li>
+                  <li>14 брендів</li>
+                  <li>Вихід на європейські ринки</li>
+                </ul>
+                <!-- /.list-primary --no-bullet -->
+                <div class="xl:mt-auto w-full flex justify-center xl:justify-start">
+                  <button type="submit" class="btn-primary --yellow">
+                    <span class="btn-primary-icon">
+                      <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+                    </span>
+                    <span class="btn-primary-text">Ментор-консультація</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Top -->
+        <!-- Bot -->
+        <div class="flex flex-col xl:flex-row-reverse xl:justify-between gap-6">
+          <div class="half-wrap-image aspect-[343/219]">
+            <img src="/img/common/team-img.jpg" class="w-full h-full object-cover" width="652" height="416" alt="">
+          </div>
+          <div class="half-wrap-content xl:space-between gap-6">
+            <div class="flex flex-col gap-4 xl:gap-8">
+              <h3 class="section-title-h4 max-w-half-lg">
+                Команда SAPUNOVA - це не просто спеціалісти. Це спільність.
+              </h3>
+              <p class="text-body-sm xl:text-body-lg text-dark-main">
+                Ми об’єднуємо підприємців, управлінців і профільних стратегів - під завдання, сферу та момент.
+              </p>
+            </div>
+            <div class="flex justify-center xl:justify-start w-full xl:mt-auto">
+              <a href="tel:+380965558832" class="btn-primary --yellow">
+                <span class="btn-primary-icon">
+                  <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+                </span>
+                <span class="btn-primary-text">Залучити команду</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /Bot -->
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-team -->
+
+    <section id="section-9" class="page-section bg-primary text-foreground">
+      <div class="content --fit flex flex-col gap-8 xl:gap-14">
+        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px]">
+          <h2 class="section-title-h2">Наш підхід</h2>
+          <ul class="list-primary --black">
+            <li class="uppercase pl-7">Від концепції до впровадження</li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <div class="section-step-item">
+            <p class="section-step-number">01</p>
+            <h4 class="section-step-title">
+              Context first
+            </h4>
+            <div>
+              <p class="section-step-text">
+                Вивчаємо реалії бізнесу та ринку
+              </p>
+            </div>
+          </div>
+          <div class="section-step-item">
+            <p class="section-step-number">02</p>
+            <h4 class="section-step-title">
+              Human-Centered
+            </h4>
+            <div>
+              <p class="section-step-text">
+                Розкриваємо потенціал
+              </p>
+            </div>
+          </div>
+          <div class="section-step-item">
+            <p class="section-step-number">03</p>
+            <h4 class="section-step-title">
+              Strategic
+            </h4>
+            <div>
+              <p class="section-step-text">
+                Дивимось на кроки вперед
+              </p>
+            </div>
+          </div>
+          <div class="section-step-item">
+            <p class="section-step-number">04</p>
+            <h4 class="section-step-title">
+              Focused Collaboration
+            </h4>
+            <div>
+              <p class="section-step-text">
+                Залучаємо лише потрібних людей в команду
+              </p>
+            </div>
+          </div>
+          <div class="section-step-item">
+            <p class="section-step-number">05</p>
+            <h4 class="section-step-title">
+              Applied
+            </h4>
+            <div class="section-step-text-wrap">
+              <p class="section-step-text">
+                Впроваджуємо разом
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-9 -->
+
+    <section id="section-projects" class="page-section">
+      <div class="content --fit flex flex-col gap-6">
+        <h2 class="section-title-h2">Наші проєкти</h2>
+        <div class="flex flex-col w-full">
+          <div class="section-project">
+            <div class="section-project-pic">
+              <img src="/img/common/project-square-1.jpg"
+                   width="652" height="652" alt="">
+              <a href="#" class="section-project-arrow">
+                <svg width="201" height="201" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#4B4B4B" stroke-width="4" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="section-project-info">
+              <div class="section-project-info-top">
+                <h3 class="text-h3-lg xl:text-company-name">Sebone</h3>
+                <p class="text-dark-main text-body-md xl:text-body-lg">2025</p>
+              </div>
+              <div class="section-project-info-bot">
+                <p class="text-body-md xl:text-body-lg">Новий бренд масажного обладнання в Європі, який поєднує технології та турботу</p>
+                <div class="section-project-location">Європа, Польща</div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section-project -->
+          <div class="section-project">
+            <div class="section-project-pic">
+              <img src="/img/common/project-square-2.jpg"
+                   width="652" height="652" alt="">
+              <a href="#" class="section-project-arrow">
+                <svg width="201" height="201" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#4B4B4B" stroke-width="4" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="section-project-info">
+              <div class="section-project-info-top">
+                <h3 class="text-h3-lg xl:text-company-name">Crab’s Burgers</h3>
+              </div>
+              <div class="section-project-info-bot">
+                <p class="text-body-md xl:text-body-lg">Бургерна нового формату зі сміливими смаками та морським настроєм.</p>
+                <div class="section-project-location">Європа, Іспанія</div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section-project -->
+          <div class="section-project">
+            <div class="section-project-pic">
+              <img src="/img/common/project-square-3.jpg"
+                   width="652" height="652" alt="">
+              <a href="#" class="section-project-arrow">
+                <svg width="201" height="201" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#4B4B4B" stroke-width="4" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="section-project-info">
+              <div class="section-project-info-top">
+                <h3 class="text-h3-lg xl:text-company-name">Fish&Chips</h3>
+                <p class="text-dark-main text-body-md xl:text-body-lg">2024</p>
+              </div>
+              <div class="section-project-info-bot">
+                <p class="text-body-md xl:text-body-lg">Fast food ресторан морепродуктів із класичним fish & chips у сучасній подачі.</p>
+                <div class="section-project-location">Європа, Україна</div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section-project -->
+
+          <div class="w-full pt-6 xl:pt-14 flex justify-center">
+            <button type="button" class="btn-primary --yellow">
+              <span class="btn-primary-icon">
+                <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+              </span>
+              <span class="btn-primary-text">Всі проєкти</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-projects -->
+
+    <section id="section-reviews" class="page-section bg-white text-foreground overflow-hidden">
+      <div class="content --fit mb-14">
+        <div class="flex flex-col gap-4 xl:gap-8 w-full">
+          <h2 class="section-title-h2">Наші послуги</h2>
+          <p class="text-subtitle xl:text-subtitle-lg before-bullet">
+            Клієнти цінують результат
+          </p>
+        </div>
+      </div>
+      <!-- /.content -->
+      <div id="reviews-carousel" class="flex gap-4 xl:gap-6">
+        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
+          <div class="flex flex-col gap-10">
+            <div class="flex items-start gap-6">
+              <div class="size-20 rounded-full overflow-hidden">
+                <img src="/img/common/review-1.jpg"
+                     class="w-full h-full object-cover"
+                     width="80" height="80" alt="">
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="text-body-lg">Анна Ковальчук</p>
+                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                  CEO
+                </p>
+              </div>
+            </div>
+            <div class="text-body-sm text-light-main line-clamp-6">
+              <p>
+                «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
+              </p>
+            </div>
+          </div>
+          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+            <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
+            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+              <img src="/img/icons/arrow-top-right.svg"
+                   class="w-full h-full object-cover rotate-180"
+                   width="40" height="40" alt="">
+            </span>
+          </a>
+        </div>
+        <!-- /.review-item -->
+        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
+          <div class="flex flex-col gap-10">
+            <div class="flex items-start gap-6">
+              <div class="size-20 rounded-full overflow-hidden">
+                <img src="/img/common/review-2.jpg"
+                     class="w-full h-full object-cover"
+                     width="80" height="80" alt="">
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="text-body-lg">Михайло Дорошенко</p>
+                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                  Product Director
+                </p>
+              </div>
+            </div>
+            <div class="text-body-sm text-light-main line-clamp-6">
+              <p>
+                «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
+              </p>
+            </div>
+          </div>
+          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+            <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
+            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+              <img src="/img/icons/arrow-top-right.svg"
+                   class="w-full h-full object-cover rotate-180"
+                   width="40" height="40" alt="">
+            </span>
+          </a>
+        </div>
+        <!-- /.review-item -->
+        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
+          <div class="flex flex-col gap-10">
+            <div class="flex items-start gap-6">
+              <div class="size-20 rounded-full overflow-hidden">
+                <img src="/img/common/review-3.jpg"
+                     class="w-full h-full object-cover"
+                     width="80" height="80" alt="">
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="text-body-lg">Ігор Сивак</p>
+                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                  Head of Growth
+                </p>
+              </div>
+            </div>
+            <div class="text-body-sm text-light-main line-clamp-6">
+              <p>
+                «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
+              </p>
+            </div>
+          </div>
+          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+            <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
+            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
+              <img src="/img/icons/arrow-top-right.svg"
+                   class="w-full h-full object-cover rotate-180"
+                   width="40" height="40" alt="">
+            </span>
+          </a>
+        </div>
+        <!-- /.review-item -->
+      </div>
+      <!-- /#reviews-carousel -->
+      <div class="flex gap-2 mt-10 justify-center xl:mt-20">
+        <button type="button" disabled class="group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
+          <svg class="w-full rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <button type="button" class="group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
+          <svg class="w-full rotate-225" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#1E1D1D" stroke-width="10" stroke-linecap="square"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- /#section-reviews -->
+
+    <section id="section-blog" class="page-section">
+      <div class="content --fit">
+        <div class="flex flex-row justify-between items-center gap-4 w-full mb-8 xl:mb-14">
+          <h2 class="section-title-h2">Наш блог</h2>
+          <div class="flex gap-2">
+            <button type="button" disabled class="group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
+              <svg class="rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-disabled:stroke-dark-stroke-hover " d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </button>
+            <button type="button" class="group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
+              <svg class="rotate-225" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-disabled:stroke-dark-stroke-hover " d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+
+      <div id="blog-carousel" class="flex gap-4 xl:gap-6">
+        <div class="blog-item">
+          <div class="blog-tag">
+            Аналітика ринку
+          </div>
+          <h5 class="blog-title">
+            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+          </h5>
+          <div class="blog-pic">
+            <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+              <img src="/img/common/review-1.jpg"
+                   class="w-full h-full object-cover"
+                   width="80" height="80" alt="">
+            </div>
+            <div class="flex flex-col gap-1 items-start grow">
+              <p class="text-body-sm">Анна Нікова</p>
+              <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+            </div>
+          </div>
+          <div class="blog-bottom">
+            <div class="blog-date">27/12/2025</div>
+            <a href="#" class="blog-link">
+              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.blog-item -->
+        <div class="blog-item">
+          <div class="blog-tag">
+            Інсайти та тренди
+          </div>
+          <h5 class="blog-title">
+            Коли компанії потрібна стратегічна пауза
+          </h5>
+          <div class="blog-pic">
+            <img src="/img/common/blog/2.jpg" width="379" height="213" alt="">
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+              <img src="/img/common/review-2.jpg"
+                   class="w-full h-full object-cover"
+                   width="80" height="80" alt="">
+            </div>
+            <div class="flex flex-col gap-1 items-start grow">
+              <p class="text-body-sm">Максим Герасименко</p>
+              <p class="text-body-xs text-dark-main">Час читання 10 хв</p>
+            </div>
+          </div>
+          <div class="blog-bottom">
+            <div class="blog-date">29/12/2025</div>
+            <a href="#" class="blog-link">
+              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.blog-item -->
+        <div class="blog-item">
+          <div class="blog-tag">
+            Аналітика ринку
+          </div>
+          <h5 class="blog-title">
+            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+          </h5>
+          <div class="blog-pic">
+            <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+              <img src="/img/common/review-1.jpg"
+                   class="w-full h-full object-cover"
+                   width="80" height="80" alt="">
+            </div>
+            <div class="flex flex-col gap-1 items-start grow">
+              <p class="text-body-sm">Анна Нікова</p>
+              <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+            </div>
+          </div>
+          <div class="blog-bottom">
+            <div class="blog-date">27/12/2025</div>
+            <a href="#" class="blog-link">
+              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.blog-item -->
+      </div>
+      <!-- /#blog-carousel -->
+      <div class="w-full pt-8 xl:pt-20 flex justify-center">
+        <button type="button" class="btn-primary --yellow">
+              <span class="btn-primary-icon">
+                <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+              </span>
+          <span class="btn-primary-text">Всі проєкти</span>
+        </button>
+      </div>
+    </section>
+    <!-- /#section-blog -->
+
+    <section id="section-10" class="page-section">
+      <div class="content --fit">
+        <div class="flex flex-col xl:flex-row gap-4 xl:gap-6">
+          <div class="group bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 xl:min-h-[424px] grow xl:w-1/2">
+            <div class="flex flex-col items-start gap-8 xl:justify-between h-full">
+              <div class="flex flex-row-reverse gap-4 items-start justify-between w-full">
+                <a href="#" class="shrink-0 flex items-center justify-center transition-colors size-14 xl:size-18 rounded-full bg-white group-hover:bg-foreground">
+                  <svg class="rotate-180 w-full h-full" width="201" height="201" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:stroke-white xl:stroke-6 transition-colors" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#4B4B4B" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+                <h4 class="section-title-h3 transition-colors">Поставити запитання</h4>
+              </div>
+
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
+                Ми перетворюємо дані на інсайти, що стають основою вірних рішень.
+              </p>
+            </div>
+          </div>
+          <div class="group bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 xl:min-h-[424px] grow xl:w-1/2">
+            <div class="flex flex-col items-start gap-8 xl:justify-between h-full">
+              <div class="flex flex-row-reverse gap-4 items-start justify-between w-full">
+                <a href="#" class="shrink-0 flex items-center justify-center transition-colors size-14 xl:size-18 rounded-full bg-white group-hover:bg-foreground">
+                  <svg class="rotate-180 w-full h-full" width="201" height="201" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:stroke-white xl:stroke-6 transition-colors" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#4B4B4B" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+                <h4 class="section-title-h3 transition-colors">Зв’язатися з нами</h4>
+              </div>
+
+              <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
+                Хочете розпочати співпрацю чи отримати консультацію? Залиште контакти — ми відповімо найближчим часом.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+    </section>
+    <!-- /#section-10 -->
   </main>
   <!-- /Main -->
 
   <!-- Footer -->
-  <footer class="w-full h-150">footer</footer>
+  <footer class="w-full page-section">
+    <div class="content flex flex-col gap-10">
+      <div class="w-full flex flex-col gap-10 xl:flex-row xl:grow">
+        <div class="w-full flex flex-col items-start gap-4 xl:grid xl:grid-cols-3 xl:content-start xl:gap-10">
+          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+            Проєкти
+          </a>
+          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+            Блог
+          </a>
+          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+            Контакти
+          </a>
+          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+            Політика конфіденційності
+          </a>
+          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+            Умови користування
+          </a>
+        </div>
+        <div class="w-full flex flex-col xl:w-1/3 xl:shrink-0">
+          <p class="text-body-xs mb-4 xl:mb-6 xl:text-body-sm text-dark-main">Наш Email та номер телефону</p>
+          <a href="tel:+380965558832" class="mb-2 xl:mb-4 text-body-lg xl:text-h3 hover:underline underline-offset-4">
+            +380965558832
+          </a>
+          <a href="mailto:sapunova2025@gmail.com" class="mb-2 xl:mb-4 text-body-lg xl:text-h3 hover:underline underline-offset-4">
+            sapunova2025@gmail.com
+          </a>
+        </div>
+      </div>
+      <div class="w-full flex flex-col xl:flex-row gap-4 xl:justify-between items-start">
+        <div class="flex gap-8.5">
+          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+            <img src="/img/icons/soc-fb.svg" width="44" height="44" alt="Facebook">
+            <span class="sr-only">Ми в Facebook</span>
+          </a>
+          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+            <img src="/img/icons/soc-ig.svg" width="44" height="44" alt="Instagram">
+            <span class="sr-only">Ми в Instagram</span>
+          </a>
+          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+            <img src="/img/icons/soc-x.svg" width="44" height="44" alt="X">
+            <span class="sr-only">Ми в X</span>
+          </a>
+        </div>
+
+        <p class="text-body-xs text-body-sm text-dark-main xl:w-1/3">
+          © 2025 SAPUNOVA. Усі права захищено.
+        </p>
+      </div>
+      <div class="w-full">
+        <img src="/img/common/logo.svg"
+             class="w-full"
+             width="1328" height="520" alt="">
+      </div>
+    </div>
+    <!-- /.content -->
+  </footer>
   <!-- Footer -->
 </div>
 <!-- /Page -->
 
-<script type="module" src="/src/shared/scroll.js"></script>
-<script type="module" src="/src/shared/header.js"></script>
+<script type="module" src="/src/shared/common.js"></script>
 
 <script type="module" src="/src/pages/home/main.js"></script>
 </body>

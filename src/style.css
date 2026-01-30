@@ -101,9 +101,11 @@
   --spacing-logo-sm: 123px;
   --spacing-logo-lg: 217px;
   --spacing-half-lg: 652px;
+  --spacing-input-height: 48px;
 
   /* Aspect */
   --aspect-logo: 217/85;
+  --aspect-blog-pic: 379/213;
 
 }
 
@@ -112,7 +114,7 @@ body {
 }
 
 @utility content {
-  @apply w-full mx-auto px-4 xl:px-14 max-w-content-row 2xl:max-w-hd;
+  @apply w-full mx-auto px-4 xl:px-14 max-w-content-row xl:max-w-hd [&.--fit]:max-w-lg [&.--fit]:xl:max-w-hd;
 }
 
 @utility page-section {
@@ -129,6 +131,22 @@ body {
 
 @utility section-title-h2 {
   @apply text-h2 xl:text-h2-lg uppercase;
+}
+
+@utility before-bullet {
+  @apply relative pl-7;
+  &::before {
+    @apply content-[''] size-3 absolute left-0 top-1/2 -translate-y-1/2 bg-primary rounded-full;
+  }
+}
+
+
+@utility half-wrap-image {
+  @apply aspect-square w-full xl:w-1/2 max-w-half-lg overflow-hidden rounded-lg;
+}
+
+@utility half-wrap-content {
+  @apply w-full xl:w-1/2 flex flex-col items-start;
 }
 
 @layer components {
@@ -232,7 +250,7 @@ body {
       }
     }
     .btn-primary-text {
-      @apply text-lg-button text-white grow;
+      @apply text-md-button xl:text-lg-button text-white grow uppercase;
     }
     .btn-primary-icon {
       @apply bg-white w-14 h-7 shrink-0 rounded-full flex items-center justify-center;
@@ -242,15 +260,173 @@ body {
     }
   }
 
+  /* Form elements */
+  .sap-form-wrap {
+    @apply grid grid-cols-1 xl:grid-cols-2 gap-4;
+  }
+  .sap-form-rules-text {
+    @apply text-body-xs text-dark-main;
+  }
+  .sap-form-rules-link {
+    @apply text-white underline-offset-2 hover:underline;
+  }
+  .sap-input {
+    @apply flex flex-col gap-3 items-start;
+    &:hover {
+      .sap-input-clear {@apply opacity-100}
+    }
+    &.--disabled {
+      .sap-input-label {@apply text-light-main}
+      .sap-input-clear {@apply invisible}
+      .sap-input-field {@apply placeholder:text-light-stroke text-light-stroke}
+    }
+    &.--error {
+      .sap-input-error {@apply flex}
+      .sap-input-field {@apply border-danger}
+    }
+  }
+  .sap-input-label {
+    @apply text-body-xs text-white;
+  }
+  .sap-input-inner {
+    @apply w-full relative;
+  }
+  .sap-input-field {
+    @apply w-full h-input-height border-2 border-transparent bg-white py-3 pl-3 pr-9 font-secondary placeholder:font-secondary placeholder:text-header-field text-foreground rounded-md outline-none relative z-2 placeholder:text-dark-main;
+    &:focus {
+      @apply border-primary-stroke;
+    }
+    textarea& {
+      @apply min-h-[152px] py-3 resize-none
+    }
+  }
+  .sap-input-clear {
+    @apply items-center justify-center absolute z-3 right-3 top-1/2 -translate-y-1/2 size-6 cursor-pointer hover:opacity-75 transition-opacity duration-200 opacity-5;
+    img {
+      @apply w-full h-full object-cover
+    }
+  }
+  .sap-input-error {
+    @apply hidden flex gap-2 items-start
+  }
+  .sap-input-error-text {
+    @apply flex flex-col gap-2;
+    p {
+      @apply text-dark-main text-xs w-full;
+    }
+  }
 
-  /* Section */
+  /* Common */
   .list-primary {
     @apply list-none;
     li {
-      @apply relative py-4 pl-9 not-last:border-b border-dark-stroke-hover xl:text-body-lg text-body-md;
+      @apply relative py-4 pl-9 not-last:border-b border-dark-stroke-hover text-body-md xl:text-body-lg;
       &::before {
         @apply content-[''] size-3 absolute left-0 top-1/2 -translate-y-1/2 bg-primary rounded-full;
       }
+    }
+    &.--no-bullet {
+      li {
+        @apply pl-0;
+        &::before {@apply content-none}
+      }
+    }
+    &.--black {
+      li {
+        &::before {
+          @apply bg-foreground
+        }
+      }
+    }
+  }
+
+
+  .section-project {
+    @apply w-full rounded-lg transition-colors bg-transparent hover:bg-gray-hover w-full flex flex-col xl:flex-row xl:even:flex-row-reverse gap-6 xl:gap-8 xl:justify-between pb-10 xl:pb-0 overflow-hidden;
+    &:hover {
+      .section-project-arrow {
+        @apply bg-primary;
+      }
+    }
+    &:nth-child(even) {
+      .section-project-arrow {@apply xl:right-auto xl:-left-11}
+      .section-project-info {@apply xl:pl-6 xl:pr-0}
+    }
+  }
+  .section-project-pic {
+    @apply half-wrap-image xl:max-w-full xl:w-full relative overflow-visible;
+    img {
+      @apply w-full h-full object-cover rounded-lg relative z-2;
+    }
+  }
+  .section-project-arrow {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 xl:-right-11 xl:left-auto xl:translate-x-0 z-3 flex items-center justify-center transition-colors size-22 rounded-full bg-white;
+    svg {
+      @apply w-full h-full;
+    }
+  }
+  .section-project-info {
+    @apply half-wrap-content xl:shrink-0 xl:justify-between gap-8 xl:py-14 xl:pr-6
+  }
+  .section-project-info-top {
+    @apply w-full flex flex-col gap-2;
+  }
+  .section-project-info-bot {
+    @apply w-full flex flex-col gap-6;
+  }
+
+  .section-project-location {
+    @apply before-bullet text-subtitle xl:text-subtitle-lg text-dark-main relative uppercase;
+  }
+
+
+  /* section-step-item */
+  .section-step-item {
+    @apply flex flex-col items-start xl:flex-row xl:justify-start gap-2 not-last:border-b border-primary-stroke py-4 xl:py-6;
+  }
+  .section-step-number {
+    @apply text-company-name xl:text-step-number xl:w-[24%];
+  }
+  .section-step-title {
+    @apply text-body-lg xl:text-h4-lg uppercase xl:w-[37%];
+  }
+  .section-step-text {
+    @apply text-body-md xl:text-body-lg text-primary-text;
+  }
+  .section-step-text-wrap {
+    @apply xl:w-[39%]
+  }
+
+  /* Blog */
+  .blog-item {
+    @apply relative rounded-lg overflow-hidden bg-background-dark-card max-w-[427px] px-4 py-6 xl:px-6 flex flex-col gap-6 items-start hover:bg-gray-hover transition-colors;
+    &:hover {
+      .blog-tag {@apply bg-primary;}
+      .blog-link {@apply bg-primary;}
+    }
+  }
+  .blog-tag {
+    @apply min-h-[34px] px-2 py-1 bg-background-light rounded-full text-foreground text-body-xs flex items-center justify-center uppercase transition-colors
+  }
+  .blog-title {
+    @apply line-clamp-4 text-body-lg xl:text-h3 h-32 xl:h-40;
+  }
+  .blog-pic {
+    @apply overflow-hidden w-full aspect-blog-pic rounded-lg;
+    & > img {
+      @apply w-full h-full object-cover;
+    }
+  }
+  .blog-bottom {
+    @apply flex items-center justify-between w-full gap-2;
+  }
+  .blog-date {
+    @apply text-subtitle xl:text-subtitle-lg;
+  }
+  .blog-link {
+    @apply size-10 rounded-full overflow-hidden bg-white flex items-center justify-center transition-colors;
+    & > svg {
+      @apply rotate-180
     }
   }
 
