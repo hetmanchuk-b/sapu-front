@@ -106,6 +106,10 @@
   /* Aspect */
   --aspect-logo: 217/85;
   --aspect-blog-pic: 379/213;
+  --aspect-article-pic: 343/193;
+
+  /* Breakpoints */
+  --breakpoint-3xl: 1660px;
 
 }
 
@@ -399,14 +403,20 @@ body {
 
   /* Blog */
   .blog-item {
-    @apply relative rounded-lg overflow-hidden bg-background-dark-card max-w-[427px] px-4 py-6 xl:px-6 flex flex-col gap-6 items-start hover:bg-gray-hover transition-colors;
+    @apply relative rounded-lg overflow-hidden bg-background-dark-card max-w-[321px] xl:max-w-[427px] px-4 py-6 xl:px-6 flex flex-col gap-6 items-start hover:bg-gray-hover transition-colors shrink-0;
     &:hover {
       .blog-tag {@apply bg-primary;}
       .blog-link {@apply bg-primary;}
     }
   }
   .blog-tag {
-    @apply min-h-[34px] px-2 py-1 bg-background-light rounded-full text-foreground text-body-xs flex items-center justify-center uppercase transition-colors
+    @apply min-h-[34px] px-2 py-1 bg-background-light rounded-full text-foreground text-body-xs flex items-center justify-center uppercase transition-colors whitespace-nowrap;
+    &.--article {
+      @apply bg-transparent text-white border px-4 border-dark-stroke-hover;
+    }
+    &.--active {
+      @apply bg-primary text-foreground
+    }
   }
   .blog-title {
     @apply line-clamp-4 text-body-lg xl:text-h3 h-32 xl:h-40;
@@ -430,4 +440,32 @@ body {
     }
   }
 
+  .article-text {
+    @apply w-full mx-auto max-w-half-lg;
+    h2, h3, h4, h5, h6 {
+      @apply text-body-md text-white xl:text-h3 not-last:mb-4 not-first:mt-6 not-last:xl:mb-8 not-first:xl:mt-14
+    }
+    p, ul, ol {
+      @apply text-body-sm xl:text-body-lg text-dark-main
+    }
+  }
+
+  .pagination-button {
+    @apply size-8 xl:size-12 text-body-sm xl:text-subtitle-lg text-center flex justify-center items-center leading-none rounded-lg border border-dark-stroke-hover text-light-main hover:border-white hover:text-white transition-colors cursor-pointer;
+    &.--active {
+      @apply bg-primary text-foreground
+    }
+  }
+
+  /* Reviews */
+  .review-item {
+    @apply flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px] h-full min-h-86 shrink-0
+  }
+
+  .socials-link {
+    @apply size-11 transition-opacity hover:opacity-75 flex items-center justify-center;
+    img {
+      @apply w-full;
+    }
+  }
 }

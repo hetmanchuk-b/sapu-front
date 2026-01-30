@@ -119,7 +119,7 @@
       <!-- /.content -->
     </section>
     <!-- /#section-hero -->
-    <section id="section-2" class="bg-white text-background-dark page-section">
+    <section id="section-2" class="bg-white text-background-dark page-section full-section">
       <div class="content space-y-8 xl:space-y-25">
         <div class="w-full flex flex-col items-center xl:flex-row xl:justify-between gap-8">
           <div class="grow w-full">
@@ -156,7 +156,7 @@
     </section>
     <!-- /#section-2 -->
 
-    <section id="section-3" class="page-section">
+    <section id="section-3" class="page-section full-section">
       <div class="content">
         <div class="flex flex-col mb-10 xl:mb-20">
           <h2 class="section-title-h3">
@@ -761,128 +761,411 @@
         </div>
       </div>
       <!-- /.content -->
-      <div id="reviews-carousel" class="flex gap-4 xl:gap-6">
-        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
-          <div class="flex flex-col gap-10">
-            <div class="flex items-start gap-6">
-              <div class="size-20 rounded-full overflow-hidden">
-                <img src="/img/common/review-1.jpg"
-                     class="w-full h-full object-cover"
-                     width="80" height="80" alt="">
+      <div class="px-4 xl:pr-0 xl:pl-14">
+        <div id="reviews-carousel" class="carousel-container w-full overflow-hidden" data-carousel>
+          <div class="carousel-track w-full flex touch-pan-y">
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-1.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Анна Ковальчук</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      CEO
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
+                  </p>
+                </div>
               </div>
-              <div class="flex flex-col gap-2">
-                <p class="text-body-lg">Анна Ковальчук</p>
-                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
-                  CEO
-                </p>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-2.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Михайло Дорошенко</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Product Director
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
+                  </p>
+                </div>
               </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
             </div>
-            <div class="text-body-sm text-light-main line-clamp-6">
-              <p>
-                «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
-              </p>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-3.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Ігор Сивак</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Head of Growth
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
             </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-1.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Анна Ковальчук</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      CEO
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-2.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Михайло Дорошенко</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Product Director
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-3.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Ігор Сивак</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Head of Growth
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-1.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Анна Ковальчук</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      CEO
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-2.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Михайло Дорошенко</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Product Director
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-3.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Ігор Сивак</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Head of Growth
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-1.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Анна Ковальчук</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      CEO
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Ми прийшли з ідеєю, а пішли з чіткою стратегією зростання. Завдяки команді консалтингу ми вивели бренд Sebone на європейський ринок за 6 місяців та збільшили впізнаваність на 70%.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-2.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Михайло Дорошенко</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Product Director
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
+            <div class="review-item">
+              <div class="flex flex-col gap-10">
+                <div class="flex items-start gap-6">
+                  <div class="size-20 rounded-full overflow-hidden">
+                    <img src="/img/common/review-3.jpg"
+                         class="w-full h-full object-cover"
+                         width="80" height="80" alt="">
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class="text-body-lg">Ігор Сивак</p>
+                    <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
+                      Head of Growth
+                    </p>
+                  </div>
+                </div>
+                <div class="text-body-sm text-light-main line-clamp-6">
+                  <p>
+                    «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
+                  </p>
+                </div>
+              </div>
+              <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
+                <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
+                <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
+                <img src="/img/icons/arrow-top-right.svg"
+                     class="w-full h-full object-cover rotate-180"
+                     width="40" height="40" alt="">
+              </span>
+              </a>
+            </div>
+            <!-- /.review-item -->
           </div>
-          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
-            <span class="text-background-dark text-h4 xl:text-h4-lg">Sebone</span>
-            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
-              <img src="/img/icons/arrow-top-right.svg"
-                   class="w-full h-full object-cover rotate-180"
-                   width="40" height="40" alt="">
-            </span>
-          </a>
-        </div>
-        <!-- /.review-item -->
-        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
-          <div class="flex flex-col gap-10">
-            <div class="flex items-start gap-6">
-              <div class="size-20 rounded-full overflow-hidden">
-                <img src="/img/common/review-2.jpg"
-                     class="w-full h-full object-cover"
-                     width="80" height="80" alt="">
-              </div>
-              <div class="flex flex-col gap-2">
-                <p class="text-body-lg">Михайло Дорошенко</p>
-                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
-                  Product Director
-                </p>
-              </div>
-            </div>
-            <div class="text-body-sm text-light-main line-clamp-6">
-              <p>
-                «Консалтингова підтримка допомогла нам масштабувати бізнес на три країни й підвищити конверсію бронювань на 45%. Це був системний підхід, який дав реальний результат і створив основу для подальшого зростання.»
-              </p>
-            </div>
+          <div class="flex gap-2 mt-10 justify-center xl:mt-20">
+            <button type="button" class="carousel-btn-prev group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
+              <svg class="w-full rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="stroke-foreground group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </button>
+            <button type="button" class="carousel-btn-next group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
+              <svg class="w-full rotate-225" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="stroke-foreground group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#1E1D1D" stroke-width="10" stroke-linecap="square"/>
+              </svg>
+            </button>
           </div>
-          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
-            <span class="text-background-dark text-h4 xl:text-h4-lg">GreenMotion</span>
-            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center hover:bg-background-dark-card transition-colors">
-              <img src="/img/icons/arrow-top-right.svg"
-                   class="w-full h-full object-cover rotate-180"
-                   width="40" height="40" alt="">
-            </span>
-          </a>
         </div>
-        <!-- /.review-item -->
-        <div class="review-item flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px]">
-          <div class="flex flex-col gap-10">
-            <div class="flex items-start gap-6">
-              <div class="size-20 rounded-full overflow-hidden">
-                <img src="/img/common/review-3.jpg"
-                     class="w-full h-full object-cover"
-                     width="80" height="80" alt="">
-              </div>
-              <div class="flex flex-col gap-2">
-                <p class="text-body-lg">Ігор Сивак</p>
-                <p class="text-subtitle xl:text-subtitle-lg text-background-dark">
-                  Head of Growth
-                </p>
-              </div>
-            </div>
-            <div class="text-body-sm text-light-main line-clamp-6">
-              <p>
-                «Розроблена стратегія виявилась надзвичайно точною. Ми зменшили витрати на маркетинг на 30%, зберігши при цьому темпи росту. Це справжнє партнерство, а не просто консалтинг.»
-              </p>
-            </div>
-          </div>
-          <a href="#" class="flex justify-between w-full items-center transition-opacity hover:opacity-75">
-            <span class="text-background-dark text-h4 xl:text-h4-lg">VitaFarms</span>
-            <span class="size-10 rounded-full overflow-hidden bg-background-dark flex items-center justify-center">
-              <img src="/img/icons/arrow-top-right.svg"
-                   class="w-full h-full object-cover rotate-180"
-                   width="40" height="40" alt="">
-            </span>
-          </a>
-        </div>
-        <!-- /.review-item -->
-      </div>
-      <!-- /#reviews-carousel -->
-      <div class="flex gap-2 mt-10 justify-center xl:mt-20">
-        <button type="button" disabled class="group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
-          <svg class="w-full rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
-          </svg>
-        </button>
-        <button type="button" class="group size-10 xl:size-12 rounded-full cursor-pointer disabled:cursor-default disabled:border-light-stroke flex items-center justify-center border border-foreground hover:opacity-75">
-          <svg class="w-full rotate-225" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="group-disabled:stroke-light-stroke" d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#1E1D1D" stroke-width="10" stroke-linecap="square"/>
-          </svg>
-        </button>
+        <!-- /#reviews-carousel -->
       </div>
     </section>
     <!-- /#section-reviews -->
 
-    <section id="section-blog" class="page-section">
-      <div class="content --fit">
+    <section id="section-blog" class="page-section" data-carousel>
+      <div class="content">
         <div class="flex flex-row justify-between items-center gap-4 w-full mb-8 xl:mb-14">
           <h2 class="section-title-h2">Наш блог</h2>
           <div class="flex gap-2">
-            <button type="button" disabled class="group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
+            <button type="button" class="carousel-btn-prev group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
               <svg class="rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="group-disabled:stroke-dark-stroke-hover " d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
               </svg>
             </button>
-            <button type="button" class="group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
+            <button type="button" class="carousel-btn-next group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
               <svg class="rotate-225" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="group-disabled:stroke-dark-stroke-hover " d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#FFFFFF" stroke-width="10" stroke-linecap="square"/>
               </svg>
@@ -892,109 +1175,302 @@
       </div>
       <!-- /.content -->
 
-      <div id="blog-carousel" class="flex gap-4 xl:gap-6">
-        <div class="blog-item">
-          <div class="blog-tag">
-            Аналітика ринку
-          </div>
-          <h5 class="blog-title">
-            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
-          </h5>
-          <div class="blog-pic">
-            <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
-          </div>
-          <div class="flex items-center gap-6">
-            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
-              <img src="/img/common/review-1.jpg"
-                   class="w-full h-full object-cover"
-                   width="80" height="80" alt="">
+      <div class="px-4 xl:pr-0 xl:pl-14">
+        <div id="blog-carousel" class="carousel-container w-full overflow-hidden">
+          <div class="carousel-track w-full flex touch-pan-y">
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="flex flex-col gap-1 items-start grow">
-              <p class="text-body-sm">Анна Нікова</p>
-              <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Інсайти та тренди
+              </div>
+              <h5 class="blog-title">
+                Коли компанії потрібна стратегічна пауза
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/2.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-2.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Максим Герасименко</p>
+                  <p class="text-body-xs text-dark-main">Час читання 10 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">29/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
             </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Інсайти та тренди
+              </div>
+              <h5 class="blog-title">
+                Коли компанії потрібна стратегічна пауза
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/2.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-2.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Максим Герасименко</p>
+                  <p class="text-body-xs text-dark-main">Час читання 10 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">29/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Інсайти та тренди
+              </div>
+              <h5 class="blog-title">
+                Коли компанії потрібна стратегічна пауза
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/2.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-2.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Максим Герасименко</p>
+                  <p class="text-body-xs text-dark-main">Час читання 10 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">29/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
+            <div class="blog-item">
+              <div class="blog-tag">
+                Аналітика ринку
+              </div>
+              <h5 class="blog-title">
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+                Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
+              </h5>
+              <div class="blog-pic">
+                <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
+              </div>
+              <div class="flex items-center gap-6">
+                <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+                  <img src="/img/common/review-1.jpg"
+                       class="w-full h-full object-cover"
+                       width="80" height="80" alt="">
+                </div>
+                <div class="flex flex-col gap-1 items-start grow">
+                  <p class="text-body-sm">Анна Нікова</p>
+                  <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
+                </div>
+              </div>
+              <div class="blog-bottom">
+                <div class="blog-date">27/12/2025</div>
+                <a href="#" class="blog-link">
+                  <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- /.blog-item -->
           </div>
-          <div class="blog-bottom">
-            <div class="blog-date">27/12/2025</div>
-            <a href="#" class="blog-link">
-              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
-              </svg>
-            </a>
-          </div>
+
         </div>
-        <!-- /.blog-item -->
-        <div class="blog-item">
-          <div class="blog-tag">
-            Інсайти та тренди
-          </div>
-          <h5 class="blog-title">
-            Коли компанії потрібна стратегічна пауза
-          </h5>
-          <div class="blog-pic">
-            <img src="/img/common/blog/2.jpg" width="379" height="213" alt="">
-          </div>
-          <div class="flex items-center gap-6">
-            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
-              <img src="/img/common/review-2.jpg"
-                   class="w-full h-full object-cover"
-                   width="80" height="80" alt="">
-            </div>
-            <div class="flex flex-col gap-1 items-start grow">
-              <p class="text-body-sm">Максим Герасименко</p>
-              <p class="text-body-xs text-dark-main">Час читання 10 хв</p>
-            </div>
-          </div>
-          <div class="blog-bottom">
-            <div class="blog-date">29/12/2025</div>
-            <a href="#" class="blog-link">
-              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <!-- /.blog-item -->
-        <div class="blog-item">
-          <div class="blog-tag">
-            Аналітика ринку
-          </div>
-          <h5 class="blog-title">
-            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
-            Організаційна культура як стратегічний актив: чому “атмосфера” у команді вирішує більше
-          </h5>
-          <div class="blog-pic">
-            <img src="/img/common/blog/1.jpg" width="379" height="213" alt="">
-          </div>
-          <div class="flex items-center gap-6">
-            <div class="size-10.5 rounded-full overflow-hidden flex items-center justify-center shrink-0">
-              <img src="/img/common/review-1.jpg"
-                   class="w-full h-full object-cover"
-                   width="80" height="80" alt="">
-            </div>
-            <div class="flex flex-col gap-1 items-start grow">
-              <p class="text-body-sm">Анна Нікова</p>
-              <p class="text-body-xs text-dark-main">Час читання 5 хв</p>
-            </div>
-          </div>
-          <div class="blog-bottom">
-            <div class="blog-date">27/12/2025</div>
-            <a href="#" class="blog-link">
-              <svg width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M132.141 134.226H67L67 69.0764M68.0007 133L134.209 67.0078" stroke="#121212" stroke-width="10" stroke-linecap="square"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <!-- /.blog-item -->
+        <!-- /#blog-carousel -->
       </div>
-      <!-- /#blog-carousel -->
       <div class="w-full pt-8 xl:pt-20 flex justify-center">
         <button type="button" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
-          <span class="btn-primary-text">Всі проєкти</span>
+          <span class="btn-primary-text">всі статті</span>
         </button>
       </div>
     </section>
@@ -1048,19 +1524,19 @@
     <div class="content flex flex-col gap-10">
       <div class="w-full flex flex-col gap-10 xl:flex-row xl:grow">
         <div class="w-full flex flex-col items-start gap-4 xl:grid xl:grid-cols-3 xl:content-start xl:gap-10">
-          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+          <a href="#" class="text-header-field text-white xl:text-body-lg hover:underline underline-offset-4">
             Проєкти
           </a>
-          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+          <a href="#" class="text-header-field text-white xl:text-body-lg hover:underline underline-offset-4">
             Блог
           </a>
-          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+          <a href="#" class="text-header-field text-white xl:text-body-lg hover:underline underline-offset-4">
             Контакти
           </a>
-          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+          <a href="#" class="text-header-field text-white xl:text-body-lg hover:underline underline-offset-4">
             Політика конфіденційності
           </a>
-          <a href="#" class="text-header-field text-white xl:text-body-lg whitespace-nowrap hover:underline underline-offset-4">
+          <a href="#" class="text-header-field text-white xl:text-body-lg hover:underline underline-offset-4">
             Умови користування
           </a>
         </div>
@@ -1076,15 +1552,15 @@
       </div>
       <div class="w-full flex flex-col xl:flex-row gap-4 xl:justify-between items-start">
         <div class="flex gap-8.5">
-          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+          <a href="#" class="socials-link">
             <img src="/img/icons/soc-fb.svg" width="44" height="44" alt="Facebook">
             <span class="sr-only">Ми в Facebook</span>
           </a>
-          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+          <a href="#" class="socials-link">
             <img src="/img/icons/soc-ig.svg" width="44" height="44" alt="Instagram">
             <span class="sr-only">Ми в Instagram</span>
           </a>
-          <a href="#" class="size-11 transition-opacity hover:opacity-75 flex items-center justify-center">
+          <a href="#" class="socials-link">
             <img src="/img/icons/soc-x.svg" width="44" height="44" alt="X">
             <span class="sr-only">Ми в X</span>
           </a>
