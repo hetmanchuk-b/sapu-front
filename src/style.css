@@ -64,7 +64,7 @@
   --text-title-lg--line-height: 56px;
   --text-title-lg--font-weight: 400;
   --text-h3-lg: 64px;
-  --text-h3-lg--line-height: 64px;
+  --text-h3-lg--line-height: 72px;
   --text-h3-lg--font-weight: 400;
   --text-h2-lg: 80px;
   --text-h2-lg--line-height: 80px;
@@ -139,6 +139,10 @@ body {
 
 @utility section-title-h2 {
   @apply text-h2 xl:text-h2-lg uppercase;
+}
+
+@utility section-title-h1 {
+  @apply text-h1 xl:text-h1-lg uppercase;
 }
 
 @utility before-bullet {
@@ -483,7 +487,7 @@ body {
 
   /* Reviews */
   .review-item {
-    @apply flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px] h-full min-h-86 shrink-0
+    @apply flex flex-col justify-between gap-4 p-4 xl:p-10 bg-background-light transition-colors hover:bg-primary-light-3 rounded-lg w-full max-w-[427px] h-full min-h-96 shrink-0
   }
 
   .socials-link {
@@ -529,5 +533,38 @@ body {
     img {
       @apply w-full h-full object-cover;
     }
+  }
+
+  /* Service */
+  .step-item {
+    @apply
+      z-[calc(var(--index)+1)]
+      xl:top-[calc(10px+var(--offset))]
+      xl:sticky rounded-lg p-4 xl:p-10
+    xl:min-h-75 xl:h-[65vh];
+  }
+  .step-item-head {
+    @apply flex flex-col xl:flex-row gap-4 xl:items-center;
+  }
+  .step-item-order {
+    @apply text-primary-text text-subtitle-lg xl:shrink-0 xl:h-12 xl:min-w-10;
+  }
+  .step-item-name {
+    @apply xl:grow flex items-center justify-between gap-4;
+  }
+  .step-item-title {
+    @apply text-h4 xl:text-title-lg uppercase;
+  }
+  .step-item-icon {
+    @apply size-16 shrink-0;
+    img {
+      @apply size-16
+    }
+  }
+  .step-item-content {
+    @apply xl:pl-14 xl:pt-6;
+  }
+  .step-item-text {
+    @apply text-body-sm xl:text-body-lg text-primary-text;
   }
 }
