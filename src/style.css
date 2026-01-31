@@ -20,6 +20,9 @@
   --color-light-stroke: #E7E7E7;
   --color-danger: #FF3B30;
   --color-success: #34C759;
+  --color-project-end: #EE8D34;
+  --color-project-start: #FDF050;
+  --color-project-future: #74FF27;
 
 
   /* Typography */
@@ -107,6 +110,7 @@
   --aspect-logo: 217/85;
   --aspect-blog-pic: 379/213;
   --aspect-article-pic: 343/193;
+  --aspect-projects-map: 248/240;
 
   /* Breakpoints */
   --breakpoint-3xl: 1660px;
@@ -329,6 +333,14 @@ body {
         @apply content-[''] size-3 absolute left-0 top-1/2 -translate-y-1/2 bg-primary rounded-full;
       }
     }
+    &.--section {
+      li {
+        @apply flex flex-col xl:flex-row xl:items-center justify-start gap-6;
+        &::before {
+          @apply top-6 translate-y-0 xl:top-1/2 xl:-translate-y-1/2
+        }
+      }
+    }
     &.--no-bullet {
       li {
         @apply pl-0;
@@ -349,11 +361,11 @@ body {
     @apply w-full rounded-lg transition-colors bg-transparent hover:bg-gray-hover w-full flex flex-col xl:flex-row xl:even:flex-row-reverse gap-6 xl:gap-8 xl:justify-between pb-10 xl:pb-0 overflow-hidden;
     &:hover {
       .section-project-arrow {
-        @apply bg-primary;
+        @apply bg-primary scale-[1.2] duration-300;
       }
     }
     &:nth-child(even) {
-      .section-project-arrow {@apply xl:right-auto xl:-left-11}
+      .section-project-arrow {@apply xl:right-auto xl:-left-11 -rotate-90}
       .section-project-info {@apply xl:pl-6 xl:pr-0}
     }
   }
@@ -364,7 +376,7 @@ body {
     }
   }
   .section-project-arrow {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 xl:-right-11 xl:left-auto xl:translate-x-0 z-3 flex items-center justify-center transition-colors size-22 rounded-full bg-white;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 duration-3000 -translate-y-1/2 xl:-right-11 xl:left-auto xl:translate-x-0 z-3 flex items-center justify-center transition-all size-22 rounded-full bg-white;
     svg {
       @apply w-full h-full;
     }
@@ -423,6 +435,9 @@ body {
     &.--article {
       @apply bg-transparent text-white border px-4 border-dark-stroke-hover;
     }
+    a&, button& {
+      @apply hover:border-light-stroke cursor-pointer;
+    }
     &.--active {
       @apply bg-primary text-foreground
     }
@@ -475,6 +490,44 @@ body {
     @apply size-11 transition-opacity hover:opacity-75 flex items-center justify-center;
     img {
       @apply w-full;
+    }
+  }
+
+  /* Projects */
+  .map-marker {
+    @apply absolute size-8 xl:size-11 flex items-center justify-center;
+
+    &.end {.map-marker-dot::before {@apply bg-project-end}}
+    &.start {.map-marker-dot::before {@apply bg-project-start}}
+    &.future {.map-marker-dot::before {@apply bg-project-future}}
+    &.--reverse {
+      .map-marker-content {
+        @apply left-auto right-12 xl:left-auto xl:right-15
+      }
+    }
+  }
+  .map-marker-dot {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-8 xl:size-11 shrink-0 bg-foreground/80 border border-light-main rounded-full;
+    &::before {
+      @apply content-[''] size-3 xl:size-4 rounded-full bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+    }
+  }
+  .map-marker-content {
+    @apply w-[160px] xl:w-[366px] absolute top-1/2 left-12 xl:left-15 -translate-y-1/2 shrink-0 rounded-lg bg-foreground/80 border border-light-main p-2 xl:p-4 flex items-center gap-2 xl:gap-6;
+  }
+  .map-marker-company {
+    @apply text-body-xs xl:text-body-lg;
+  }
+  .map-marker-location {
+    @apply text-[10px] leading-[14px] xl:text-[24px] xl:leading-[28px] font-light uppercase text-light-stroke;
+  }
+  .map-marker-text {
+    @apply flex flex-col gap-1 xl:gap-2 items-start shrink-0;
+  }
+  .map-marker-pic {
+    @apply rounded-full overflow-hidden size-9 xl:size-20 shrink-0;
+    img {
+      @apply w-full h-full object-cover;
     }
   }
 }
