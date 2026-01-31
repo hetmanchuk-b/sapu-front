@@ -386,19 +386,28 @@ body {
 
   /* section-step-item */
   .section-step-item {
-    @apply flex flex-col items-start xl:flex-row xl:justify-start gap-2 not-last:border-b border-primary-stroke py-4 xl:py-6;
+    @apply flex flex-col items-start xl:flex-row xl:justify-between not-last:border-b border-primary-stroke py-4 xl:py-6;
+    &.--white {
+      @apply border-light-stroke gap-2 xl:gap-0;
+      .section-step-text {
+        @apply text-light-main
+      }
+      .section-step-text-wrap {
+        @apply xl:w-[40%]
+      }
+    }
   }
   .section-step-number {
-    @apply text-company-name xl:text-step-number xl:w-[24%];
+    @apply text-company-name xl:text-step-number xl:w-[23%] shrink-0;
   }
   .section-step-title {
-    @apply text-body-lg xl:text-h4-lg uppercase xl:w-[37%];
+    @apply text-body-lg xl:text-h4-lg uppercase xl:w-[37%] shrink-0 xl:pr-20;
   }
   .section-step-text {
     @apply text-body-md xl:text-body-lg text-primary-text;
   }
   .section-step-text-wrap {
-    @apply xl:w-[39%]
+    @apply xl:w-[39%] shrink-0
   }
 
   /* Blog */
