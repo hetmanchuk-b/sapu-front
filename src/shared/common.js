@@ -1,22 +1,78 @@
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
+import {SplitText} from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
 import LocomotiveScroll from 'locomotive-scroll';
 
 const scroll = new LocomotiveScroll();
-gsap.registerPlugin(Draggable, InertiaPlugin, ScrollTrigger)
+gsap.registerPlugin(Draggable, InertiaPlugin, ScrollTrigger, SplitText)
 
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.getElementById('header');
 
 headerTrigger.addEventListener('click', () => {
   if (header.classList.contains('mob-open')) {
+    scroll.start()
     header.classList.remove('mob-open');
   } else {
+    scroll.stop()
     header.classList.add('mob-open');
   }
 });
+
+const fixedHeaderTween = gsap.from('#header', {
+  yPercent: -100,
+  paused: true,
+  duration: 0.2,
+}).progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: "max",
+  // markers: true,
+  onUpdate: (self) => {
+    self.direction === -1 ? fixedHeaderTween.play() : fixedHeaderTween.reverse()
+  }
+});
+
+gsap.from(header, {
+  duration: 1,
+  opacity: 0,
+  yPercent: -110,
+})
+
+// ================================================
+//   SplitText
+// ================================================
+
+gsap.set('.line-split', {opacity: 1})
+document.fonts.ready.then(() => {
+  const containers = gsap.utils.toArray('.line-split-container')
+  containers.forEach((container) => {
+    const text = gsap.utils.toArray(container.querySelectorAll('.line-split'));
+    let animation;
+
+    SplitText.create(text, {
+      type: 'words,lines',
+      mask: 'lines',
+      linesClass: 'line',
+      autoSplit: true,
+      onSplit: (instance) => {
+        return gsap.from(instance.lines, {
+          yPercent: 120,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: container,
+            scrub: true,
+            start: 'clamp(top bottom)',
+            end: 'clamp(bottom 80%)',
+          }
+        })
+      }
+    })
+  })
+})
 
 // ================================================
 //   CAROUSEL CLASS

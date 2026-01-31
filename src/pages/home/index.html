@@ -15,8 +15,8 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
+    <div class="content fixed z-7 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
+    <div class="content h-full relative z-8 hidden xl:block">
       <div class="flex items-center justify-between gap-4 h-full">
         <nav class="nav-wrap">
           <a href="#" class="nav-link">Проєкти</a>
@@ -108,8 +108,8 @@
         </div>
         <div class="relative z-3 w-full flex flex-col items-start justify-end py-10 xl:py-18">
           <div class="absolute z-3 inset-0 bg-linear-to-t from-foreground to-transparent"></div>
-          <div class="w-full max-w-[1215px] relative z-4 px-4 xl:px-14">
-            <h1 class="heading-1 text-white">
+          <div class="w-full max-w-[1315px] relative z-4 px-4 xl:px-14">
+            <h1 data-scroll data-scroll-speed="0.1" class="hero-title heading-1 text-white">
               <span class="text-primary">Стратегія</span> зі змістом <br>
               Результат для <span class="text-primary">бізнесу</span>
             </h1>
@@ -120,10 +120,10 @@
     </section>
     <!-- /#section-hero -->
     <section id="section-2" class="bg-white text-background-dark page-section full-section">
-      <div class="content space-y-8 xl:space-y-25">
+      <div class="content space-y-8 xl:space-y-25 line-split-container ">
         <div class="w-full flex flex-col items-center xl:flex-row xl:justify-between gap-8">
           <div class="grow w-full">
-            <h2 class="section-title-h3">
+            <h2 class="section-title-h3 line-split">
               Стратегічний консалтинг <span class="xl:hidden">—</span>
               <br>
               наша сфера впливу
@@ -158,14 +158,14 @@
 
     <section id="section-3" class="page-section full-section">
       <div class="content">
-        <div class="flex flex-col mb-10 xl:mb-20">
-          <h2 class="section-title-h3">
+        <div class="flex flex-col mb-10 xl:mb-20 line-split-container">
+          <h2 class="section-title-h3 line-split">
             Світ бізнесу сповнений порад, <br class="hidden xl:block"> але не кожна з них стає рішенням.
           </h2>
           <div class="w-full flex justify-end">
             <img src="/img/icons/arrow-right-down.svg" class="size-25 lg:size-[201px]" width="201" height="201" alt="">
           </div>
-          <h3 class="section-title-h3 text-end">
+          <h3 class="section-title-h3 text-end line-split">
             Ми працюємо на <span class="text-primary">результат</span>
           </h3>
         </div>
@@ -174,8 +174,8 @@
           <div class="w-full xl:w-1/2 aspect-square overflow-hidden rounded-lg max-w-half-lg">
             <img src="/img/home/section-3.jpg" class="w-full h-full object-cover" width="652" height="652" alt="">
           </div>
-          <div class="w-full xl:w-1/2 flex flex-col gap-6 items-start relative">
-            <div class="w-full xl:sticky xl:top-4 xl:pb-20 z-2">
+          <div class="w-full xl:w-1/2 flex flex-col gap-6 items-start relative ">
+            <div class="w-full z-2">
               <ul class="list-primary">
                 <li>Аналізуємо контекст і цілі бізнесу</li>
                 <li>Залучаємо потрібних фахівців</li>
@@ -199,9 +199,9 @@
     <!-- /#section-3 -->
 
     <section id="section-4" class="page-section">
-      <div class="content">
-        <div class="mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Наші послуги</h2>
+      <div class="content ">
+        <div class="mb-8 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">Наші послуги</h2>
         </div>
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-6">
           <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group">
@@ -345,7 +345,7 @@
     <!-- /#section-4 -->
 
     <section id="section-5" class="page-section">
-      <div class="content">
+      <div class="content line-split-container">
         <div class="w-full max-w-lg xl:max-w-full mx-auto flex flex-col xl:flex-row-reverse xl:justify-between gap-6">
           <!-- Img -->
           <div class="half-wrap-image">
@@ -358,7 +358,7 @@
           <!-- Left -->
           <div class="w-full xl:w-1/2 flex flex-col xl:justify-between gap-6">
             <!-- Top -->
-            <div class="flex flex-col gap-4 xl:gap-6 xl:sticky xl:top-4 xl:pb-24 z-2">
+            <div class="flex flex-col gap-4 xl:gap-6 z-2">
               <h4 class="section-title-h4">Стратегічні консультації для ветеранського бізнесу</h4>
               <ul class="list-primary">
                 <li>Аудит поточного стану бізнесу</li>
@@ -392,8 +392,8 @@
     <section id="section-contact" class="page-section">
       <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
-        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
-          <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
+        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between line-split-container">
+          <h3 class="section-title-h3 line-split">Маєте питання чи хочете обговорити проєкт?</h3>
           <div class="space-y-4 text-dark-main text-body-sm xl:text-body-lg">
             <p>Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
             <p>Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
@@ -515,9 +515,9 @@
     <!-- /#section-contact -->
 
     <section id="section-7" class="page-section pb-0">
-      <div class="content --fit">
+      <div class="content --fit line-split-container">
         <div class="flex flex-col">
-          <h2 class="section-title-h3">
+          <h2 class="section-title-h3 line-split">
             <span class="text-primary">Синергія</span> досвіду та кваліфікації <br>
             <span class="text-primary">для ваших цілей</span>
           </h2>
@@ -533,15 +533,17 @@
       <div class="content --fit flex flex-col gap-10 xl:gap-14">
         <!-- Top -->
         <div class="flex flex-col gap-6 xl:gap-8 w-full">
-          <p class="text-title-lg xl:text-person-name uppercase">Олена Борисова</p>
-          <div class="flex flex-col xl:flex-row xl:justify-between gap-6">
+          <div class="line-split-container">
+            <p class="text-title-lg xl:text-person-name uppercase line-split">Олена Борисова</p>
+          </div>
+          <div class="flex flex-col xl:flex-row xl:justify-between gap-6 line-split-container">
             <div class="half-wrap-image">
               <img src="/img/common/team-host.jpg"
                    class="w-full h-full object-cover"
                    width="652" height="652" alt="">
             </div>
             <div class="flex flex-col gap-4 xl:gap-6 w-full xl:w-1/2">
-              <h3 class="section-title-h3">
+              <h3 class="section-title-h3 line-split">
                 Засновниця агенції <br>
                 та менторка
               </h3>
@@ -571,9 +573,9 @@
           <div class="half-wrap-image aspect-[343/219]">
             <img src="/img/common/team-img.jpg" class="w-full h-full object-cover" width="652" height="416" alt="">
           </div>
-          <div class="half-wrap-content xl:space-between gap-6">
+          <div class="half-wrap-content xl:space-between gap-6 line-split-container">
             <div class="flex flex-col gap-4 xl:gap-8">
-              <h3 class="section-title-h4 max-w-half-lg">
+              <h3 class="section-title-h4 max-w-half-lg line-split">
                 Команда SAPUNOVA - це не просто спеціалісти. Це спільність.
               </h3>
               <p class="text-body-sm xl:text-body-lg text-dark-main">
@@ -598,64 +600,64 @@
 
     <section id="section-9" class="page-section bg-primary text-foreground">
       <div class="content --fit flex flex-col gap-8 xl:gap-14">
-        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px]">
-          <h2 class="section-title-h2">Наш підхід</h2>
+        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px] line-split-container">
+          <h2 class="section-title-h2 line-split">Наш підхід</h2>
           <ul class="list-primary --black">
-            <li class="uppercase pl-7">Від концепції до впровадження</li>
+            <li class="uppercase pl-7 line-split">Від концепції до впровадження</li>
           </ul>
         </div>
         <div class="w-full">
-          <div class="section-step-item">
-            <p class="section-step-number">01</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split" data-scroll data-scroll-speed="0.08">01</p>
+            <h4 class="section-step-title line-split" data-scroll data-scroll-speed="-0.05">
               Context first
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split" data-scroll data-scroll-speed="0.03">
                 Вивчаємо реалії бізнесу та ринку
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">02</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split" data-scroll data-scroll-speed="0.08">02</p>
+            <h4 class="section-step-title line-split" data-scroll data-scroll-speed="-0.05">
               Human-Centered
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split" data-scroll data-scroll-speed="0.03">
                 Розкриваємо потенціал
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">03</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split" data-scroll data-scroll-speed="0.08">03</p>
+            <h4 class="section-step-title line-split" data-scroll data-scroll-speed="-0.05">
               Strategic
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split" data-scroll data-scroll-speed="0.03">
                 Дивимось на кроки вперед
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">04</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split" data-scroll data-scroll-speed="0.08">04</p>
+            <h4 class="section-step-title line-split" data-scroll data-scroll-speed="-0.05">
               Focused Collaboration
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split" data-scroll data-scroll-speed="0.03">
                 Залучаємо лише потрібних людей в команду
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">05</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split" data-scroll data-scroll-speed="0.08">05</p>
+            <h4 class="section-step-title line-split" data-scroll data-scroll-speed="-0.05">
               Applied
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split" data-scroll data-scroll-speed="0.03">
                 Впроваджуємо разом
               </p>
             </div>
@@ -669,7 +671,9 @@
 
     <section id="section-projects" class="page-section">
       <div class="content --fit flex flex-col gap-6">
-        <h2 class="section-title-h2">Наші проєкти</h2>
+        <div class="line-split-container">
+          <h2 class="section-title-h2 line-split">Наші проєкти</h2>
+        </div>
         <div class="flex flex-col w-full">
           <div class="section-project">
             <div class="section-project-pic">
@@ -752,9 +756,9 @@
     <!-- /#section-projects -->
 
     <section id="section-reviews" class="page-section bg-white text-foreground overflow-hidden">
-      <div class="content --fit mb-14">
+      <div class="content --fit mb-14 line-split-container">
         <div class="flex flex-col gap-4 xl:gap-8 w-full">
-          <h2 class="section-title-h2">Ми створюємо рішення, що працюють</h2>
+          <h2 class="section-title-h2 line-split">Ми створюємо рішення, що працюють</h2>
           <p class="text-subtitle xl:text-subtitle-lg before-bullet">
             Клієнти цінують результат
           </p>
@@ -1156,9 +1160,9 @@
     <!-- /#section-reviews -->
 
     <section id="section-blog" class="page-section" data-carousel>
-      <div class="content">
+      <div class="content line-split-container">
         <div class="flex flex-row justify-between items-center gap-4 w-full mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Наш блог</h2>
+          <h2 class="section-title-h2 line-split">Наш блог</h2>
           <div class="flex gap-2">
             <button type="button" class="carousel-btn-prev group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
               <svg class="rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1584,6 +1588,6 @@
 
 <script type="module" src="/src/shared/common.js"></script>
 
-<script type="module" src="/src/pages/home/main.js"></script>
+<script type="module" src="./main.js"></script>
 </body>
 </html>
