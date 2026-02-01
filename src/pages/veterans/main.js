@@ -12,3 +12,12 @@ gsap.from(splitTitle.chars, {
   autoAlpha: 0,
   stagger: 0.01
 })
+
+gsap.from('.anim-appear', {
+  x: -40,
+  opacity: 0,
+  duration: 0.6,
+  stagger: 0.3,
+  ease: 'power3.out',
+})
+
