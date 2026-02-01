@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -95,7 +95,7 @@
   <main class="grow w-full pt-16 xl:pt-30">
     <section id="case-section" class="page-section">
       <div class="content --fit">
-        <div class="mb-6 xl:mb-14 text-body-xs xl:text-body-lg">
+        <div class="mb-6 xl:mb-14 text-body-xs xl:text-body-lg anim-appear">
           <a href="#" class="text-dark-main">Проєкти</a>
           /
           <span class="">Sebone</span>
@@ -103,35 +103,35 @@
 
         <div class="mb-10 xl:mb-14 grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-2 gap-6">
           <div class="order-1 xl:order-1 flex flex-col gap-2 xl:gap-4">
-            <h1 class="text-h3-lg xl:text-company-name">Sebone</h1>
-            <p class="text-subtitle xl:text-subtitle-lg uppercase">Caring technology Smart innovation </p>
+            <h1 class="text-h3-lg xl:text-company-name hero-title">Fish&Chips</h1>
+            <p class="text-subtitle xl:text-subtitle-lg uppercase anim-appear">Caring technology Smart innovation </p>
           </div>
           <div class="order-3 xl:col-start-1 xl:row-start-2 xl:order-2 divide-y-1 divide-dark-stroke-hover text-body-md xl:text-body-lg self-end">
-            <p class="min-h-14 xl:min-h-16 flex items-center gap-y-1">Рік: 2025</p>
-            <p class="min-h-14 xl:min-h-16 flex items-center gap-y-1">Категорія: Health&Wellness </p>
+            <p class="min-h-14 xl:min-h-16 flex items-center gap-y-1 anim-appear">Рік: 2025</p>
+            <p class="min-h-14 xl:min-h-16 flex items-center gap-y-1 anim-appear">Категорія: Health&Wellness </p>
           </div>
           <div class="order-2 xl:row-span-2 xl:col-start-2 xl:row-start-1 xl:order-3 rounded-lg overflow-hidden">
-            <img src="/img/project/1.jpg" class="w-full" width="652" height="416" alt="">
+            <img src="/img/project/1.jpg" class="w-full op-appear h-full object-cover xl:min-h-[416px]" width="652" height="416" alt="">
           </div>
         </div>
 
-        <div class="mb-6 xl:mb-14 flex flex-col xl:flex-row-reverse gap-6 xl:justify-between">
+        <div class="line-split-container mb-6 xl:mb-14 flex flex-col xl:flex-row-reverse gap-6 xl:justify-between">
           <div class="half-wrap-content">
-            <h4 class="text-body-lg xl:text-h3 mb-4">Виклик:</h4>
-            <p class="text-body-sm xl:text-body-lg text-dark-main mb-4 xl:mb-8">
+            <h4 class="text-body-lg xl:text-h3 mb-4 op-appear">Виклик:</h4>
+            <p class="text-body-sm xl:text-body-lg text-dark-main mb-4 xl:mb-8 line-split">
               Команда багато років працювала як дистриб’ютор міжнародних брендів, допомагаючи людям відновлювати здоров’я та енергію. З досвідом прийшло розуміння: настав час створити власний бренд — сучасний, технологічний і заснований на довірі.
             </p>
-            <p class="text-body-sm xl:text-body-lg text-dark-main">
+            <p class="text-body-sm xl:text-body-lg text-dark-main line-split">
               Основним викликом став перехід партнерів на новий бренд, а також одночасний вихід на нові ринки — Іспанію та Німеччину. Завданням було створити бренд, який збереже довіру, здобуту за роки роботи, і водночас буде сучасним, технологічним та готовим до масштабування.
             </p>
           </div>
           <div class="half-wrap-image">
-            <img src="/img/project/2.jpg" class="w-full h-full object-cover" width="652" height="652" alt="">
+            <img src="/img/project/2.jpg" class="w-full h-full object-cover op-appear" width="652" height="652" alt="">
           </div>
         </div>
 
-        <div class="flex flex-col">
-          <h2 class="section-title-h3">
+        <div class="flex flex-col line-split-container">
+          <h2 class="section-title-h3 line-split">
             Так з’явився <span class="text-primary">Sebone</span>&nbsp;—&nbsp;<span class="text-primary">бренд</span>, що
             <br class="hidden xl:block"> об’єднує експертизу, інновації
             <br class="hidden xl:block"> та бачення <span class="text-primary">майбутнього</span>
@@ -150,48 +150,48 @@
 
     <section id="section-3" class="page-section">
       <div class="content --fit">
-        <div class="mb-4 xl:mb-14">
-          <h2 class="section-title-h2">Що ми зробили</h2>
+        <div class="mb-4 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">Що ми зробили</h2>
         </div>
 
         <ul class="list-primary --section">
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Дослідження і стратегія</h3>
+              <h3 class="section-title-h4 line-split">Дослідження і стратегія</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
-              <p>Проаналізували потенційні ринки, соціально-культурні особливості та конкурентів</p>
-              <p>Визначили місію, візію, цінності бренду</p>
-              <p>Створили матрицю бренду, сформували чітке позиціонування</p>
+              <p class="line-split">Проаналізували потенційні ринки, соціально-культурні особливості та конкурентів</p>
+              <p class="line-split">Визначили місію, візію, цінності бренду</p>
+              <p class="line-split">Створили матрицю бренду, сформували чітке позиціонування</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Візуальна ідентичність</h3>
+              <h3 class="section-title-h4 line-split">Візуальна ідентичність</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
-              <p>Розробили нову айдентику: сучасну, теплу й водночас технологічну</p>
-              <p>Підготували брендбук із прикладами використання для різних каналів</p>
+              <p class="line-split">Розробили нову айдентику: сучасну, теплу й водночас технологічну</p>
+              <p class="line-split">Підготували брендбук із прикладами використання для різних каналів</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Комунікаційна стратегія</h3>
+              <h3 class="section-title-h4 line-split">Комунікаційна стратегія</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
-              <p>Розробили tone of voice бренду</p>
-              <p>Створили ключові меседжі та контентні формати для digital і офлайн каналів</p>
-              <p>Адаптували стратегію під різні сегменти ЦА</p>
+              <p class="line-split">Розробили tone of voice бренду</p>
+              <p class="line-split">Створили ключові меседжі та контентні формати для digital і офлайн каналів</p>
+              <p class="line-split">Адаптували стратегію під різні сегменти ЦА</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Стандартизація і масштабування</h3>
+              <h3 class="section-title-h4 line-split">Стандартизація і масштабування</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
-              <p>Описали бізнес-процеси та підготували книгу стандартів</p>
-              <p>Створили юридичну базу (партнерський договір)</p>
-              <p>Сформували модель для розвитку мережі за франшизою</p>
+              <p class="line-split">Описали бізнес-процеси та підготували книгу стандартів</p>
+              <p class="line-split">Створили юридичну базу (партнерський договір)</p>
+              <p class="line-split">Сформували модель для розвитку мережі за франшизою</p>
             </div>
           </li>
         </ul>
@@ -202,20 +202,20 @@
 
     <section id="section-4" class="page-section">
       <div class="content --fit">
-        <div class="mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Що ми зробили</h2>
+        <div class="mb-8 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">Що ми зробили</h2>
         </div>
         <div class="bg-background-light rounded-lg text-foreground p-4 xl:p-12 xl:min-h-[288px] flex flex-col items-start gap-4">
-          <div class="flex flex-col xl:flex-row gap-4 items-start xl:items-center">
+          <div class="flex flex-col xl:flex-row gap-4 items-start xl:items-center line-split-container">
             <div class="size-16 xl:shrink-0 flex items-center justify-center">
               <img src="/img/icons/result-graph.svg" width="64" height="64" alt="">
             </div>
-            <h4 class="section-title-h4">
+            <h4 class="section-title-h4 line-split">
               Sebone: +30% залучених партнерів за перший рік
             </h4>
           </div>
-          <div class="text-body-sm xl:text-body-lg text-light-main">
-            <p>
+          <div class="text-body-sm xl:text-body-lg text-light-main line-split-container">
+            <p class="line-split">
               Команда перетворила дистриб’юторський бізнес на Sebone — сучасний, технологічний і теплий бренд, який однаково відгукнувся як серед постійних партнерів, так і на нових ринках.
             </p>
           </div>
@@ -227,8 +227,8 @@
 
     <section id="section-project-review" class="page-section bg-white text-foreground">
       <div class="content --fit">
-        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px] mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Відгук клієнта</h2>
+        <div class="line-split-container w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px] mb-8 xl:mb-14">
+          <h2 class="section-title-h2 line-split">Відгук клієнта</h2>
           <ul class="list-primary">
             <li class="uppercase pl-7 py-0">Оцінка нашої роботи з перших вуст</li>
           </ul>
@@ -256,7 +256,7 @@
         </div>
 
         <div class="flex flex-col items-start">
-          <a href="#" class="btn-primary --dark">
+          <a href="/contact" class="btn-primary --dark">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow-white.svg" width="24" height="24" alt="">
               </span>
@@ -340,12 +340,12 @@
           <!-- /.section-project -->
 
           <div class="w-full pt-6 xl:pt-14 flex justify-center">
-            <button type="button" class="btn-primary --yellow">
+            <a href="/projects" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
               <span class="btn-primary-text">Всі проєкти</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -356,11 +356,11 @@
     <section id="section-contact" class="page-section">
       <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
-        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
-          <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
+        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between line-split-container">
+          <h3 class="section-title-h3 line-split">Маєте питання чи хочете обговорити проєкт?</h3>
           <div class="space-y-4 text-dark-main text-body-sm xl:text-body-lg">
-            <p>Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
-            <p>Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
+            <p class="line-split">Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
+            <p class="line-split">Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
           </div>
         </div>
         <!-- /Text -->

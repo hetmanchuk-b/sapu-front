@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -97,8 +97,8 @@
     <div class="pt-16 xl:pt-30">
       <div class="content page-section">
         <div class="flex flex-col gap-4 xl:gap-8 mb-8 xl:mb-14">
-          <h1 class="text-h4 xl:text-h2-lg uppercase">Наш Блог</h1>
-          <p class="before-bullet text-subtitle xl:text-subtitle-lg uppercase">
+          <h1 class="text-h4 xl:text-h2-lg uppercase hero-title">Наш Блог</h1>
+          <p class="before-bullet text-subtitle xl:text-subtitle-lg uppercase anim-appear">
             Фільтр за напрямами
           </p>
         </div>

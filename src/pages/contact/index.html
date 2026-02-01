@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -97,15 +97,15 @@
       <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
         <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
-          <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
+          <h1 class="section-title-h3 hero-title">Маєте питання чи хочете обговорити проєкт?</h1>
           <div class="space-y-4 text-dark-main text-body-sm xl:text-body-lg">
-            <p>Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
-            <p>Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
+            <p class="anim-appear">Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
+            <p class="anim-appear">Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
           </div>
         </div>
         <!-- /Text -->
         <!-- Form -->
-        <div class="w-full xl:w-1/2">
+        <div class="w-full xl:w-1/2 op-appear">
           <div class="bg-background-dark-card p-4 xl:py-10 xl:px-14 rounded-lg">
             <form action="" id="questions-form">
               <div class="sap-form-wrap">
@@ -228,57 +228,57 @@
         </div>
         <div class="w-full">
           <div class="section-step-item --white">
-            <p class="section-step-number">01</p>
-            <h4 class="section-step-title">
+            <p class="section-step-number" data-scroll data-scroll-speed="-0.08">01</p>
+            <h4 class="section-step-title" data-scroll data-scroll-speed="0.04">
               Ми зв’яжемось із вами протягом
               1–2 днів
             </h4>
             <div>
-              <p class="section-step-text">
+              <p class="section-step-text" data-scroll data-scroll-speed="-0.05">
                 Уточнимо деталі запиту й домовимось про зручний час зустрічі.
               </p>
             </div>
           </div>
           <div class="section-step-item --white">
-            <p class="section-step-number">02</p>
-            <h4 class="section-step-title">
+            <p class="section-step-number" data-scroll data-scroll-speed="-0.08">02</p>
+            <h4 class="section-step-title" data-scroll data-scroll-speed="0.04">
               Проводимо мітинг-знайомство
             </h4>
             <div>
-              <p class="section-step-text">
+              <p class="section-step-text" data-scroll data-scroll-speed="-0.05">
                 Обговоримо ваші цілі, контекст і завдання бізнесу, щоб чітко визначити запит.
               </p>
             </div>
           </div>
           <div class="section-step-item --white">
-            <p class="section-step-number">03</p>
-            <h4 class="section-step-title">
+            <p class="section-step-number" data-scroll data-scroll-speed="-0.08">03</p>
+            <h4 class="section-step-title" data-scroll data-scroll-speed="0.04">
               Аналізуємо ситуацію і готуємо підхід
             </h4>
             <div>
-              <p class="section-step-text">
+              <p class="section-step-text" data-scroll data-scroll-speed="-0.05">
                 Беремо кілька днів, щоб зануритись у ваш бізнес, ринок та можливості розвитку.
               </p>
             </div>
           </div>
           <div class="section-step-item --white">
-            <p class="section-step-number">04</p>
-            <h4 class="section-step-title">
+            <p class="section-step-number" data-scroll data-scroll-speed="-0.08">04</p>
+            <h4 class="section-step-title" data-scroll data-scroll-speed="0.04">
               Презентуємо нашу роботу та бачення
             </h4>
             <div>
-              <p class="section-step-text">
+              <p class="section-step-text" data-scroll data-scroll-speed="-0.05">
                 Показуємо, як ми підходимо до стратегічних рішень, і пропонуємо формат подальшої співпраці.
               </p>
             </div>
           </div>
           <div class="section-step-item --white">
-            <p class="section-step-number">05</p>
-            <h4 class="section-step-title">
+            <p class="section-step-number" data-scroll data-scroll-speed="-0.08">05</p>
+            <h4 class="section-step-title" data-scroll data-scroll-speed="0.04">
               Погоджуємо план і стартуємо
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text" data-scroll data-scroll-speed="-0.05">
                 Фіксуємо ключові етапи, відповідальних і починаємо з діагностики або розробки стратегії.
               </p>
             </div>

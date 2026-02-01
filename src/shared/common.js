@@ -11,7 +11,6 @@ gsap.registerPlugin(Draggable, InertiaPlugin, ScrollTrigger, SplitText)
 // ================================================
 //   Header
 // ================================================
-
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.getElementById('header');
 

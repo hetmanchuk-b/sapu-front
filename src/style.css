@@ -169,19 +169,33 @@ body {
 
   /* Navigation */
   .header-wrap {
-    @apply w-full fixed z-7 inset-x-0 top-0 min-w-xs;
+    @apply w-full fixed z-7 inset-x-0 top-0 min-w-xs h-16 xl:h-30;
     &.mob-open {
       @apply h-auto;
+      .header-mob-wrap {@apply bg-background-dark}
+      .header-mob-inner {@apply flex}
     }
   }
+  .header-bg {
+    @apply content fixed z-7 inset-0 bg-linear-to-b from-foreground to-transparent;
+  }
+  .header-inner {
+    @apply content h-full relative z-8 hidden xl:block;
+  }
   .header-mob-wrap {
-    @apply content h-full relative z-7 xl:hidden group-[.mob-open]:bg-background-dark px-6;
+    @apply content h-full relative z-7 xl:hidden px-6;
+  }
+  .header-container {
+    @apply flex items-center justify-between gap-4 h-full;
+  }
+  .header-logo {
+    @apply aspect-logo w-logo-lg flex items-center justify-center;
   }
   .header-mob-top {
     @apply flex items-center justify-between gap-4 h-full min-h-16 xl:min-h-33;
   }
   .header-mob-inner {
-    @apply hidden group-[.mob-open]:flex flex-col items-start gap-10 py-10
+    @apply hidden flex-col items-start gap-10 py-10
   }
   .header-contact {
     @apply flex flex-col gap-2 items-start;
@@ -615,7 +629,7 @@ body {
     }
   }
   .step-item-content {
-    @apply xl:pl-14 xl:pt-6;
+    @apply pt-4 xl:pl-14 xl:pt-6;
   }
   .step-item-text {
     @apply text-body-sm xl:text-body-lg text-primary-text;

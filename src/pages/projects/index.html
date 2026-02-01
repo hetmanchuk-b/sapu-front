@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -94,18 +94,18 @@
   <!-- Main -->
   <main class="grow w-full pt-16 xl:pt-30">
 
-    <section id="projects-hero" class="page-section">
+    <section id="projects-hero" class="page-section overflow-hidden">
       <div class="content --fit">
         <div class="mb-8 xl:mb-18 flex flex-col gap-4 xl:gap-8">
-          <p class="before-bullet text-subtitle xl:text-subtitle-lg uppercase">Проєкти</p>
-          <h1 class="text-h2 xl:text-h1-lg uppercase">
+          <p class="before-bullet text-subtitle xl:text-subtitle-lg uppercase anim-appear">Проєкти</p>
+          <h1 class="text-h2 xl:text-h1-lg uppercase hero-title">
             Наша <span class="text-primary">місія</span>&nbsp;— підтримати
             <br class="hidden xl:block">
             бізнес у часи змін
           </h1>
         </div>
         <div class="mb-8 xl:mb-20 flex justify-end pl-6 xl:pl-0">
-          <p class="section-title-h4 text-end">
+          <p class="section-title-h4 text-end anim-appear">
             Через стратегічне мислення, <br class="hidden xl:block">
             точні дії та командну роботу
           </p>
@@ -116,13 +116,13 @@
         <div class="relative aspect-projects-map xl:w-full xl:max-w-[418px]">
           <div class="relative z-1 overflow-hidden aspect-projects-map">
             <img src="/img/common/projects-mappng.png"
-                 class="w-full"
+                 class="w-full op-appear"
                  width="248" height="240" alt="">
           </div>
           <div class="map-overlay absolute z-2 inset-0">
             <div class="map-marker top-[27%] right-[51%] future">
-              <div class="map-marker-dot"></div>
-              <div class="map-marker-content">
+              <div class="map-marker-dot op-appear"></div>
+              <div class="map-marker-content anim-appear">
                 <div class="map-marker-pic">
                   <img src="/img/projects/marker-1.jpg"
                        width="36" height="36" alt="">
@@ -135,8 +135,8 @@
             </div>
             <!-- /.map-marker -->
             <div class="map-marker top-[59%] xl:top-[79%] right-[64%] xl:right-[37%] end">
-              <div class="map-marker-dot"></div>
-              <div class="map-marker-content">
+              <div class="map-marker-dot op-appear"></div>
+              <div class="map-marker-content anim-appear">
                 <div class="map-marker-pic">
                   <img src="/img/projects/marker-2.jpg"
                        width="36" height="36" alt="">
@@ -149,8 +149,8 @@
             </div>
             <!-- /.map-marker -->
             <div class="map-marker --reverse top-[90%] xl:top-[84%] right-[44%] xl:right-[80%] start">
-              <div class="map-marker-dot"></div>
-              <div class="map-marker-content">
+              <div class="map-marker-dot op-appear"></div>
+              <div class="map-marker-content anim-appear">
                 <div class="map-marker-pic">
                   <img src="/img/projects/marker-3.jpg"
                        width="36" height="36" alt="">
@@ -331,64 +331,64 @@
 
     <section id="section-9" class="page-section bg-primary text-foreground">
       <div class="content --fit flex flex-col gap-8 xl:gap-14">
-        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px]">
-          <h2 class="section-title-h2">Наш підхід</h2>
+        <div class="w-full flex flex-col gap-4 items-start xl:gap-8 max-w-[875px] line-split-container">
+          <h2 class="section-title-h2 line-split">Наш підхід</h2>
           <ul class="list-primary --black">
             <li class="uppercase pl-7">Від концепції до впровадження</li>
           </ul>
         </div>
         <div class="w-full">
-          <div class="section-step-item">
-            <p class="section-step-number">01</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split">01</p>
+            <h4 class="section-step-title line-split">
               Context first
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split">
                 Вивчаємо реалії бізнесу та ринку
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">02</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split">02</p>
+            <h4 class="section-step-title line-split">
               Human-Centered
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split">
                 Розкриваємо потенціал
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">03</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split">03</p>
+            <h4 class="section-step-title line-split">
               Strategic
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split">
                 Дивимось на кроки вперед
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">04</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split">04</p>
+            <h4 class="section-step-title line-split">
               Focused Collaboration
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split">
                 Залучаємо лише потрібних людей в команду
               </p>
             </div>
           </div>
-          <div class="section-step-item">
-            <p class="section-step-number">05</p>
-            <h4 class="section-step-title">
+          <div class="section-step-item line-split-container">
+            <p class="section-step-number line-split">05</p>
+            <h4 class="section-step-title line-split">
               Applied
             </h4>
             <div class="section-step-text-wrap">
-              <p class="section-step-text">
+              <p class="section-step-text line-split">
                 Впроваджуємо разом
               </p>
             </div>
@@ -402,8 +402,8 @@
 
     <section id="section-reviews" class="page-section bg-white text-foreground overflow-hidden">
       <div class="content --fit mb-14">
-        <div class="flex flex-col gap-4 xl:gap-8 w-full">
-          <h2 class="section-title-h2">Ми створюємо рішення, що працюють</h2>
+        <div class="flex flex-col gap-4 xl:gap-8 w-full line-split-container">
+          <h2 class="section-title-h2 line-split">Ми створюємо рішення, що працюють</h2>
           <p class="text-subtitle xl:text-subtitle-lg before-bullet">
             Клієнти цінують результат
           </p>
@@ -807,11 +807,11 @@
     <section id="section-contact" class="page-section">
       <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
-        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
-          <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
+        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between line-split-container">
+          <h3 class="section-title-h3 line-split">Маєте питання чи хочете обговорити проєкт?</h3>
           <div class="space-y-4 text-dark-main text-body-sm xl:text-body-lg">
-            <p>Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
-            <p>Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
+            <p class="line-split">Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
+            <p class="line-split">Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
           </div>
         </div>
         <!-- /Text -->
@@ -930,8 +930,8 @@
     <!-- /#section-contact -->
     <section id="section-blog" class="page-section" data-carousel>
       <div class="content">
-        <div class="flex flex-row justify-between items-center gap-4 w-full mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Наш блог</h2>
+        <div class="flex flex-row justify-between items-center gap-4 w-full mb-8 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">Наш блог</h2>
           <div class="flex gap-2">
             <button type="button" class="carousel-btn-prev group size-10 rounded-full cursor-pointer disabled:cursor-default disabled:border-dark-stroke-hover flex items-center justify-center border border-white hover:opacity-75">
               <svg class="rotate-45" width="40" height="40" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1239,12 +1239,12 @@
         <!-- /#blog-carousel -->
       </div>
       <div class="w-full pt-8 xl:pt-20 flex justify-center">
-        <button type="button" class="btn-primary --yellow">
+        <a href="/blog" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
           <span class="btn-primary-text">всі статті</span>
-        </button>
+        </a>
       </div>
     </section>
     <!-- /#section-blog -->
@@ -1316,6 +1316,6 @@
 
 <script type="module" src="/src/shared/common.js"></script>
 
-<script type="module" src="/src/pages/home/main.js"></script>
+<script type="module" src="./main.js"></script>
 </body>
 </html>

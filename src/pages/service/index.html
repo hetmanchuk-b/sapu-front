@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content absolute z-6 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-7 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -95,24 +95,24 @@
   <main class="grow w-full pt-16 xl:pt-24">
     <section id="section-1" class="page-section full-section">
       <div class="content --fit">
-        <div class="mb-4 xl:mb-8 before-bullet uppercase text-subtitle xl:text-subtitle-lg">Бренд-стратегія</div>
+        <div class="mb-4 xl:mb-8 before-bullet uppercase text-subtitle xl:text-subtitle-lg anim-appear">Бренд-стратегія</div>
         <div class="flex flex-col">
-          <h1 class="section-title-h1">
+          <h1 class="section-title-h1 hero-title">
             <span class="text-primary">Бренд</span>&nbsp;—
             це більше, <br class="hidden xl:block"> ніж логотип
           </h1>
-          <div class="w-full flex justify-end">
+          <div class="w-full flex justify-end anim-appear">
             <img src="/img/icons/arrow-right-down.svg" class="size-25 lg:size-[201px]" width="201" height="201" alt="">
           </div>
         </div>
 
         <div class="mb-10 xl:mb-14 flex flex-col gap-6 xl:flex-row max-w-lg xl:max-w-full w-full mx-auto xl:justify-between">
           <div class="w-full xl:w-1/2 aspect-square overflow-hidden rounded-lg max-w-half-lg">
-            <img src="/img/service/1.jpg" class="w-full h-full object-cover" width="652" height="652" alt="">
+            <img src="/img/service/1.jpg" class="op-appear w-full h-full object-cover" width="652" height="652" alt="">
           </div>
           <div class="w-full xl:w-1/2 flex flex-col gap-6 items-start relative">
             <div class="w-full">
-              <h4 class="section-title-h3">Що включає бренд-стратегія:</h4>
+              <h4 class="section-title-h3 anim-appear">Що включає бренд-стратегія:</h4>
             </div>
             <div class="xl:mt-auto relative z-3 flex flex-col items-center xl:items-start gap-2 xl:gap-6">
               <ul class="list-primary">
@@ -130,15 +130,15 @@
         <!-- /Top -->
         <!-- Bot -->
         <div class="grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-2 gap-6">
-          <div class="order-1 xl:order-1 flex flex-col gap-2 xl:gap-8">
-            <h3 class="section-title-h4 max-w-half-lg">
+          <div class="order-1 xl:order-1 flex flex-col gap-2 xl:gap-8 line-split-container">
+            <h3 class="section-title-h4 max-w-half-lg line-split">
               Ми створюємо бренд-стратегії Для впізнаваності та довіри.
             </h3>
             <p class="text-dark-main text-body-sm xl:text-body-lg hidden xl:block">За потреби долучаємо неймінг, візуальну стратегію, комунікаційну платформу.</p>
           </div>
           <div class="order-3 xl:col-start-1 xl:row-start-2 xl:order-2 self-end">
             <p class="text-dark-main text-body-sm xl:text-body-lg xl:hidden">За потреби долучаємо неймінг, візуальну стратегію, комунікаційну платформу.</p>
-            <a href="#" class="btn-primary --yellow w-fit">
+            <a href="/contact" class="btn-primary --yellow w-fit">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
@@ -157,49 +157,49 @@
 
     <section id="section-2" class="page-section">
       <div class="content --fit">
-        <div class="mb-4 xl:mb-14">
-          <h2 class="section-title-h2">
+        <div class="mb-4 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">
             коли потрібна <br>
             бренд-стратегія
           </h2>
         </div>
 
         <ul class="list-primary --section">
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">коли потрібна бренд-стратегія</h3>
+              <h3 class="line-split section-title-h4">коли потрібна бренд-стратегія</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
               <p>Потрібна концепція, позиціонування, назва та цілісна ідея, що працюватиме на ринку.</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Якщо бренд не відображає суть або застряг</h3>
+              <h3 class="line-split section-title-h4">Якщо бренд не відображає суть або застряг</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
               <p>Потрібно оновити візуальну, вербальну й стратегічну частину — без втрати довіри.</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Якщо готуєтесь до масштабування або франшизи</h3>
+              <h3 class="line-split section-title-h4">Якщо готуєтесь до масштабування або франшизи</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
               <p>Потрібна чітка структура, бренд-документація та узгоджена ідентичність.</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Якщо є зміна фокусу, аудиторії чи ринку</h3>
+              <h3 class="line-split section-title-h4">Якщо є зміна фокусу, аудиторії чи ринку</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
               <p>Потрібна адаптація бренду до нових умов, аудиторій або ринків.</p>
             </div>
           </li>
-          <li>
+          <li class="line-split-container">
             <div class="w-full grow xl:pl-20">
-              <h3 class="section-title-h4">Якщо в бренда слабка лояльність аудиторії</h3>
+              <h3 class="line-split section-title-h4">Якщо в бренда слабка лояльність аудиторії</h3>
             </div>
             <div class="w-full xl:w-[40%] shrink-0 flex flex-col gap-4 xl:gap-6 text-dark-main text-body-md xl:text-body-lg">
               <p>Потрібна стратегічна основа, що формує зміст і забезпечує стабільну впізнаваність.</p>
@@ -216,88 +216,88 @@
         <h2 class="section-title-h2 mb-8 xl:mb-14">Як ми працюємо</h2>
 
         <div class="flex flex-col items-stretch justify-start gap-4 xl:gap-0 relative">
-          <div class="step-item bg-primary-stroke" style="--index: 0; --offset: 10px;">
+          <div class="line-split-container step-item bg-primary-stroke" style="--index: 0; --offset: 10px;">
             <div class="step-item-head">
-              <div class="step-item-order">
+              <div class="step-item-order line-split">
                 01.
               </div>
               <div class="step-item-name">
-                <h4 class="step-item-title">Знайомство та брифінг</h4>
+                <h4 class="step-item-title line-split">Знайомство та брифінг</h4>
                 <div class="step-item-icon">
                   <img src="/img/service/icons/ser-1.svg" width="64" height="64" alt="">
                 </div>
               </div>
             </div>
             <div class="step-item-content">
-              <p class="step-item-text">Зустрічаємось, щоб зрозуміти ваш запит, контекст і очікування.</p>
+              <p class="step-item-text line-split">Зустрічаємось, щоб зрозуміти ваш запит, контекст і очікування.</p>
             </div>
           </div>
           <!-- /.step-item -->
-          <div class="step-item bg-primary" style="--index: 1; --offset: 90px;">
+          <div class="line-split-container step-item bg-primary" style="--index: 1; --offset: 90px;">
             <div class="step-item-head">
-              <div class="step-item-order">
+              <div class="step-item-order line-split">
                 02.
               </div>
               <div class="step-item-name">
-                <h4 class="step-item-title">Дослідження та аналітика</h4>
+                <h4 class="step-item-title line-split">Дослідження та аналітика</h4>
                 <div class="step-item-icon">
                   <img src="/img/service/icons/ser-2.svg" width="64" height="64" alt="">
                 </div>
               </div>
             </div>
             <div class="step-item-content">
-              <p class="step-item-text">Збираємо ринкові інсайти, вивчаємо бізнес модель, проводимо воркшопи з командою.</p>
+              <p class="step-item-text line-split">Збираємо ринкові інсайти, вивчаємо бізнес модель, проводимо воркшопи з командою.</p>
             </div>
           </div>
           <!-- /.step-item -->
-          <div class="step-item bg-primary-light-3" style="--index: 2; --offset: 170px;">
+          <div class="line-split-container step-item bg-primary-light-3" style="--index: 2; --offset: 170px;">
             <div class="step-item-head">
-              <div class="step-item-order">
+              <div class="step-item-order line-split">
                 03.
               </div>
               <div class="step-item-name">
-                <h4 class="step-item-title">Від ідеї до стратегії</h4>
+                <h4 class="step-item-title line-split">Від ідеї до стратегії</h4>
                 <div class="step-item-icon">
                   <img src="/img/service/icons/ser-3.svg" width="64" height="64" alt="">
                 </div>
               </div>
             </div>
             <div class="step-item-content">
-              <p class="step-item-text">Працюємо над концепцією, позиціонуванням, неймінгом структурою пропозиції чи візуальною айдентикою</p>
+              <p class="step-item-text line-split">Працюємо над концепцією, позиціонуванням, неймінгом структурою пропозиції чи візуальною айдентикою</p>
             </div>
           </div>
           <!-- /.step-item -->
-          <div class="step-item bg-primary-light-4" style="--index: 3; --offset: 250px;">
+          <div class="line-split-container step-item bg-primary-light-4" style="--index: 3; --offset: 250px;">
             <div class="step-item-head">
-              <div class="step-item-order">
+              <div class="step-item-order line-split">
                 04.
               </div>
               <div class="step-item-name">
-                <h4 class="step-item-title">Узгодження та доопрацювання</h4>
+                <h4 class="step-item-title line-split">Узгодження та доопрацювання</h4>
                 <div class="step-item-icon">
                   <img src="/img/service/icons/ser-4.svg" width="64" height="64" alt="">
                 </div>
               </div>
             </div>
             <div class="step-item-content">
-              <p class="step-item-text">Обговорюємо рішення з вами, тестуємо, доопрацьовуємо під вашу реальність.</p>
+              <p class="step-item-text line-split">Обговорюємо рішення з вами, тестуємо, доопрацьовуємо під вашу реальність.</p>
             </div>
           </div>
           <!-- /.step-item -->
-          <div class="step-item bg-primary-light-5" style="--index: 4; --offset: 330px;">
+          <div class="line-split-container step-item bg-primary-light-5" style="--index: 4; --offset: 330px;">
             <div class="step-item-head">
-              <div class="step-item-order">
+              <div class="step-item-order line-split">
                 05.
               </div>
               <div class="step-item-name">
-                <h4 class="step-item-title">Передача та впровадження</h4>
+                <h4 class="step-item-title line-split">Передача та впровадження</h4>
                 <div class="step-item-icon">
                   <img src="/img/service/icons/ser-4.svg" width="64" height="64" alt="">
                 </div>
               </div>
             </div>
             <div class="step-item-content">
-              <p class="step-item-text">Передаємо всі матеріали, супроводжуємо впровадження або беремо участь у запуску</p>
+              <p class="step-item-text line-split">Передаємо всі матеріали, супроводжуємо впровадження або беремо участь у запуску</p>
             </div>
           </div>
           <!-- /.step-item -->
@@ -305,7 +305,7 @@
         </div>
 
         <div class="flex justify-center mt-4 xl:mt-14">
-          <a href="#" class="btn-primary --dark">
+          <a href="/contact" class="btn-primary --dark">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow-white.svg" width="24" height="24" alt="">
               </span>
@@ -388,12 +388,12 @@
           <!-- /.section-project -->
 
           <div class="w-full pt-6 xl:pt-14 flex justify-center">
-            <button type="button" class="btn-primary --yellow">
+            <a href="/projects" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
               <span class="btn-primary-text">Всі проєкти</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -403,8 +403,8 @@
 
     <section id="section-reviews" class="page-section bg-white text-foreground overflow-hidden">
       <div class="content --fit mb-14">
-        <div class="flex flex-col gap-4 xl:gap-8 w-full">
-          <h2 class="section-title-h2">Ми створюємо рішення, що працюють</h2>
+        <div class="flex flex-col gap-4 xl:gap-8 w-full line-split-container">
+          <h2 class="section-title-h2 line-split">Ми створюємо рішення, що працюють</h2>
           <p class="text-subtitle xl:text-subtitle-lg before-bullet">
             Клієнти цінують результат
           </p>
@@ -808,8 +808,8 @@
     <section id="section-contact" class="page-section">
       <div class="content --fit flex flex-col xl:flex-row mx-auto gap-8 xl:gap-6">
         <!-- Text -->
-        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between">
-          <h3 class="section-title-h3">Маєте питання чи хочете обговорити проєкт?</h3>
+        <div class="w-full xl:w-1/2 flex flex-col gap-8 xl:gap-15.5 items-start xl:justify-between line-split-container">
+          <h3 class="section-title-h3 line-split">Маєте питання чи хочете обговорити проєкт?</h3>
           <div class="space-y-4 text-dark-main text-body-sm xl:text-body-lg">
             <p>Ми відкриті до діалогу — розкажіть про свою ідею або задачу, і ми допоможемо знайти найкраще рішення.</p>
             <p>Заповніть коротку форму, і наша команда зв’яжеться з вами найближчим часом.</p>
@@ -932,11 +932,11 @@
 
     <section id="section-4" class="page-section">
       <div class="content">
-        <div class="mb-8 xl:mb-14">
-          <h2 class="section-title-h2">Що ще ми пропонуємо</h2>
+        <div class="mb-8 xl:mb-14 line-split-container">
+          <h2 class="section-title-h2 line-split">Що ще ми пропонуємо</h2>
         </div>
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-6">
-          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group">
+          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group line-split-container">
             <div class="flex flex-col items-start gap-4">
               <div class="flex flex-col gap-4 xl:flex-row items-start xl:items-center">
                 <div class="size-16 flex items-center justify-center">
@@ -944,7 +944,7 @@
                     <path class="group-hover:stroke-foreground transition-colors" d="M53.332 18.668C56.6654 23.1213 58.6654 28.668 58.6654 34.668C58.6654 49.388 46.7187 61.3346 31.9987 61.3346C17.2787 61.3346 5.33203 49.388 5.33203 34.668C5.33203 19.948 17.2787 8.0013 31.9987 8.0013M31.9987 2.66797V34.668L57.5987 15.468C51.7587 7.70797 42.452 2.66797 31.9987 2.66797Z" stroke="#FFFFFF" stroke-width="2"/>
                   </svg>
                 </div>
-                <h4 class="section-title-h4 transition-colors">Стратегічний аналіз</h4>
+                <h4 class="section-title-h4 transition-colors line-split">Стратегічний аналіз</h4>
               </div>
 
               <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
@@ -960,7 +960,7 @@
               </a>
             </div>
           </div>
-          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group">
+          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group line-split-container">
             <div class="flex flex-col items-start gap-4">
               <div class="flex flex-col gap-4 xl:flex-row items-start xl:items-center">
                 <div class="size-16 flex items-center justify-center">
@@ -970,7 +970,7 @@
                     <path class="group-hover:stroke-foreground transition-colors" d="M19.2031 23.4661C19.2031 17.8082 21.4507 12.382 25.4515 8.3812C29.4523 4.38043 34.8785 2.13281 40.5365 2.13281C46.1944 2.13281 51.6206 4.38043 55.6214 8.3812C59.6222 12.382 61.8698 17.8082 61.8698 23.4661C61.8698 29.1241 59.6222 34.5503 55.6214 38.5511C51.6206 42.5519 46.1944 44.7995 40.5365 44.7995C34.8785 44.7995 29.4523 42.5519 25.4515 38.5511C21.4507 34.5503 19.2031 29.1241 19.2031 23.4661Z" stroke="white" stroke-width="2"/>
                   </svg>
                 </div>
-                <h4 class="section-title-h4 transition-colors">Концепція продукту/послуги</h4>
+                <h4 class="section-title-h4 transition-colors line-split">Концепція продукту/послуги</h4>
               </div>
 
               <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
@@ -986,7 +986,7 @@
               </a>
             </div>
           </div>
-          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group">
+          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group line-split-container">
             <div class="flex flex-col items-start gap-4">
               <div class="flex flex-col gap-4 xl:flex-row items-start xl:items-center">
                 <div class="size-16 flex items-center justify-center">
@@ -996,7 +996,7 @@
                     <path class="group-hover:stroke-foreground transition-colors" d="M44.7521 8.57607C40.8397 6.44033 36.4522 5.32466 31.9948 5.33207C17.2668 5.33207 5.32812 17.2707 5.32812 31.9987C5.32812 46.7267 17.2668 58.6654 31.9948 58.6654C46.7228 58.6654 58.6615 46.7267 58.6615 31.9987C58.6691 27.5419 57.5539 23.1549 55.4188 19.2427M58.6615 5.33207L31.9948 31.9987" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </div>
-                <h4 class="section-title-h4 transition-colors">Бренд стратегія</h4>
+                <h4 class="section-title-h4 transition-colors line-split">Бренд стратегія</h4>
               </div>
 
               <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
@@ -1012,7 +1012,7 @@
               </a>
             </div>
           </div>
-          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group">
+          <div class="bg-background-dark-card rounded-lg p-4 xl:p-10 transition-colors text-white hover:text-foreground hover:bg-primary flex flex-col justify-between gap-4 group line-split-container">
             <div class="flex flex-col items-start gap-4">
               <div class="flex flex-col gap-4 xl:flex-row items-start xl:items-center">
                 <div class="size-16 flex items-center justify-center">
@@ -1028,7 +1028,7 @@
                     </defs>
                   </svg>
                 </div>
-                <h4 class="section-title-h4 transition-colors">Франчайзинг/Масштабування</h4>
+                <h4 class="section-title-h4 transition-colors line-split">Франчайзинг/Масштабування</h4>
               </div>
 
               <p class="text-body-sm xl:text-body-lg text-dark-main group-hover:text-primary-text transition-colors w-full">
@@ -1119,6 +1119,6 @@
 
 <script type="module" src="/src/shared/common.js"></script>
 
-<script type="module" src="/src/pages/home/main.js"></script>
+<script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -15,16 +15,16 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header" class="header-wrap group">
-    <div class="content fixed z-7 inset-0 bg-linear-to-b from-foreground to-transparent"></div>
-    <div class="content h-full relative z-8 hidden xl:block">
-      <div class="flex items-center justify-between gap-4 h-full">
+    <div class="header-bg"></div>
+    <div class="header-inner">
+      <div class="header-container">
         <nav class="nav-wrap">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
-        <a href="#" class="aspect-logo w-logo-lg">
+        <a href="#" class="header-logo">
           <img src="/img/common/logopng-sm.png" class="w-full" width="217" height="85" alt="">
         </a>
 
@@ -50,9 +50,9 @@
       </div>
       <div class="header-mob-inner">
         <nav class="nav-wrap w-full">
-          <a href="#" class="nav-link">Проєкти</a>
-          <a href="#" class="nav-link">Блог</a>
-          <a href="#" class="nav-link">Контакти</a>
+          <a href="/projects" class="nav-link">Проєкти</a>
+          <a href="/blog" class="nav-link">Блог</a>
+          <a href="/contact" class="nav-link">Контакти</a>
         </nav>
 
         <div class="header-contact">
@@ -161,7 +161,7 @@
             </h2>
           </div>
           <div>
-            <a href="#" class="btn-primary --dark">
+            <a href="/contact" class="btn-primary --dark">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow-white.svg" width="24" height="24" alt="">
               </span>
@@ -215,12 +215,12 @@
               </ul>
             </div>
             <div class="xl:mt-auto relative z-3">
-              <button type="button" class="btn-primary --yellow">
+              <a href="/contact" class="btn-primary --yellow">
                 <span class="btn-primary-icon">
                   <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
                 </span>
                 <span class="btn-primary-text">Знайти рішення разом</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -401,12 +401,12 @@
             <!-- /Top -->
             <!-- Bot -->
             <div class="flex flex-col items-center xl:items-start gap-2 xl:gap-6 relative z-3">
-              <button type="button" class="btn-primary --yellow">
+              <a href="/veterans" class="btn-primary --yellow">
                 <span class="btn-primary-icon">
                   <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
                 </span>
                 <span class="btn-primary-text">Детальніше</span>
-              </button>
+              </a>
               <p class="text-body-xs text-dark-main">
                 Послуга надається в рамках партнерських проєктів із фондами, що інвестують у розвиток ветеранського підприємництва.
               </p>
@@ -614,7 +614,7 @@
               </p>
             </div>
             <div class="flex justify-center xl:justify-start w-full xl:mt-auto">
-              <a href="tel:+380965558832" class="btn-primary --yellow">
+              <a href="/contact" class="btn-primary --yellow">
                 <span class="btn-primary-icon">
                   <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
                 </span>
@@ -1501,12 +1501,12 @@
         <!-- /#blog-carousel -->
       </div>
       <div class="w-full pt-8 xl:pt-20 flex justify-center">
-        <button type="button" class="btn-primary --yellow">
+        <a href="/blog" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
           <span class="btn-primary-text">всі статті</span>
-        </button>
+        </a>
       </div>
     </section>
     <!-- /#section-blog -->
