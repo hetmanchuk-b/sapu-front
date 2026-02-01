@@ -273,6 +273,29 @@ body {
   }
 
   /* Form elements */
+  .vet-form {
+    @apply flex flex-col gap-4 xl:gap-6 items-stretch;
+  }
+  .vet-form-top {
+    @apply grid grid-cols-1 xl:grid-cols-2 gap-y-4 xl:gap-y-6 xl:gap-x-6;
+  }
+  .vet-form-item {
+    @apply flex flex-col gap-3 items-start;
+    &.--required-label {
+      .vet-form-item-label::before {@apply content-['*_'] text-primary;}
+    }
+  }
+  .vet-form-item-label {
+    @apply text-body-xs;
+  }
+  .vet-form-radio {
+    @apply flex flex-col gap-2 items-start;
+  }
+  .vet-form-bottom {
+    @apply grid grid-cols-1 xl:grid-cols-2 gap-4;
+  }
+
+
   .sap-form-wrap {
     @apply grid grid-cols-1 xl:grid-cols-2 gap-4;
   }
@@ -282,6 +305,8 @@ body {
   .sap-form-rules-link {
     @apply text-white underline-offset-2 hover:underline;
   }
+
+  /* Input/Textarea */
   .sap-input {
     @apply flex flex-col gap-3 items-start;
     &:hover {
@@ -295,6 +320,11 @@ body {
     &.--error {
       .sap-input-error {@apply flex}
       .sap-input-field {@apply border-danger}
+    }
+    &.--required-label {
+      .sap-input-label::before {
+        @apply content-['*_'] text-primary
+      }
     }
   }
   .sap-input-label {
@@ -326,6 +356,29 @@ body {
     p {
       @apply text-dark-main text-xs w-full;
     }
+  }
+
+  /* Checkbox */
+  .sap-checkbox {
+    input[type=checkbox], input[type=radio] {
+      @apply hidden cursor-pointer;
+
+      & + label {@apply text-header-field relative cursor-pointer}
+
+      & + label::before {
+        @apply content-[''] appearance-none bg-white border border-dark-main size-6 rounded-lg inline-block align-middle cursor-pointer mr-2;
+      }
+
+      &:checked + label::before {
+        @apply bg-primary border-primary
+      }
+
+      &:checked + label::after {
+        @apply content-[''] block absolute top-0 left-2 w-2 h-4 border-r-2 border-b-2 border-foreground rotate-45
+      }
+
+    }
+
   }
 
   /* Common */
@@ -574,5 +627,19 @@ body {
     * {
       will-change: transform;
     }
+  }
+
+  .line {
+    display: block;
+    overflow: hidden;
+  }
+
+  .line > span {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  .bg-video {
+    @apply w-full h-full object-cover
   }
 }

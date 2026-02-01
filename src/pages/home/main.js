@@ -13,3 +13,24 @@ gsap.from(splitTitle.chars, {
   stagger: 0.01
 })
 
+const videos = document.querySelectorAll('.bg-video');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (entry.isIntersecting) {
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    } else {
+      if (!video.paused) {
+        video.pause();
+      }
+    }
+  });
+}, {
+  threshold: 0.3,
+  rootMargin: "100px"
+});
+
+videos.forEach(video => observer.observe(video));

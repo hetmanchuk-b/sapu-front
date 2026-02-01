@@ -1,12 +1,16 @@
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
+import {gsap} from "gsap";
+import {Draggable} from "gsap/Draggable";
 import {SplitText} from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { InertiaPlugin } from "gsap/InertiaPlugin";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {InertiaPlugin} from "gsap/InertiaPlugin";
 import LocomotiveScroll from 'locomotive-scroll';
 
 const scroll = new LocomotiveScroll();
 gsap.registerPlugin(Draggable, InertiaPlugin, ScrollTrigger, SplitText)
+
+// ================================================
+//   Header
+// ================================================
 
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.getElementById('header');
@@ -50,28 +54,34 @@ gsap.set('.line-split', {opacity: 1})
 document.fonts.ready.then(() => {
   const containers = gsap.utils.toArray('.line-split-container')
   containers.forEach((container) => {
-    const text = gsap.utils.toArray(container.querySelectorAll('.line-split'));
-    let animation;
+    const splitElements = container.querySelectorAll('.line-split')
 
-    SplitText.create(text, {
-      type: 'words,lines',
-      mask: 'lines',
-      linesClass: 'line',
-      autoSplit: true,
-      onSplit: (instance) => {
-        return gsap.from(instance.lines, {
-          yPercent: 120,
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            start: 'clamp(top bottom)',
-            end: 'clamp(bottom 80%)',
-          }
-        })
-      }
+    splitElements.forEach((el) => {
+      SplitText.create(el, {
+        type: 'lines',
+        mask: 'lines',
+        linesClass: 'line',
+        autoSplit: true,
+        onSplit: (self) => {
+          return gsap.from(self.lines, {
+            yPercent: 120,
+            opacity: 0,
+            stagger: 0.12,
+            ease: 'power3.out',
+            duration: 1.2,
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              start: 'clamp(top bottom)',
+              end: 'clamp(bottom 80%)',
+            }
+          })
+        }
+      })
     })
   })
+
+  ScrollTrigger.refresh()
 })
 
 // ================================================
@@ -81,18 +91,18 @@ document.fonts.ready.then(() => {
 class SapCarousel {
   constructor(container) {
     this.container = container;
-    this.track      = container.querySelector('.carousel-track');
-    this.slides     = [...this.track.children];
-    this.btnPrev    = container.querySelector('.carousel-btn-prev');
-    this.btnNext    = container.querySelector('.carousel-btn-next');
+    this.track = container.querySelector('.carousel-track');
+    this.slides = [...this.track.children];
+    this.btnPrev = container.querySelector('.carousel-btn-prev');
+    this.btnNext = container.querySelector('.carousel-btn-next');
 
-    this.currentIndex   = 0;
-    this.slidesPerView  = 1;
-    this.gap            = 16;
-    this.cellWidth      = 0;       // updated on resize
+    this.currentIndex = 0;
+    this.slidesPerView = 1;
+    this.gap = 16;
+    this.cellWidth = 0;
 
     this.updateLayout = this.updateLayout.bind(this);
-    this.snap         = this.snap.bind(this);
+    this.snap = this.snap.bind(this);
 
     this.updateLayout();
     this.initDraggable();
@@ -102,7 +112,10 @@ class SapCarousel {
 
   debounce(fn, delay) {
     let t;
-    return () => { clearTimeout(t); t = setTimeout(fn, delay); };
+    return () => {
+      clearTimeout(t);
+      t = setTimeout(fn, delay);
+    };
   }
 
   updateLayout() {
@@ -145,7 +158,7 @@ class SapCarousel {
         ease: "power3.out"
       });
     } else {
-      gsap.set(this.track, { x });
+      gsap.set(this.track, {x});
     }
 
     this.updateButtons();
@@ -162,14 +175,13 @@ class SapCarousel {
     Draggable.create(this.track, {
       type: "x",
       inertia: true,
-      bounds: { minX: maxDrag(), maxX: 0 },
+      bounds: {minX: maxDrag(), maxX: 0},
       edgeResistance: 0.85,
-      throwResistance: 5000,       // controls how fast it slows down
+      throwResistance: 5000,
       snap: {
         x: this.snap
       },
       onThrowComplete: () => {
-        // After inertia + snap → find current index
         const x = gsap.getProperty(this.track, "x");
         this.currentIndex = Math.round(-x / this.cellWidth);
         this.updateButtons();

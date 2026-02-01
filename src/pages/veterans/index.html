@@ -96,13 +96,13 @@
     <section id="section-3" class="page-section full-section">
       <div class="content --fit">
         <div class="mb-6 xl:mb-14 text-body-xs xl:text-body-lg">
-          <a href="#" class="text-dark-main">Головна</a>
+          <a href="/" class="text-dark-main">Головна</a>
           /
           <span class="">Стратегічні консультації для бізнесу ветеранів</span>
         </div>
         <div class="mb-4 xl:mb-8 before-bullet uppercase text-subtitle xl:text-subtitle-lg">Ветеранський бізнес</div>
         <div class="flex flex-col">
-          <h2 class="text-h2 uppercase xl:text-h1-lg">
+          <h2 class="text-h2 uppercase xl:text-h1-lg hero-title">
             Стратегічні <span class="text-primary">Консультації</span> <br class="hidden xl:block">
             Для бізнесу ветеранів
           </h2>
@@ -121,11 +121,11 @@
             </div>
             <div class="xl:mt-auto relative z-3 flex flex-col items-center xl:items-start gap-2 xl:gap-6">
               <p class="text-body-sm xl:text-body-lg">Щоб дізнатися, чи можете ви взяти участь, заповніть форму нижче</p>
-              <button type="button" class="btn-primary --yellow">
+              <button type="button" class="vet-btn btn-primary --yellow">
                 <span class="btn-primary-icon">
                   <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
                 </span>
-                <span class="btn-primary-text">Знайти рішення разом</span>
+                <span class="btn-primary-text">Заповнити форму</span>
               </button>
               <p class="text-body-xs text-light-main">Кількість місць обмежена умовами партнерських програм</p>
             </div>
@@ -153,7 +153,7 @@
         </ul>
 
         <div class="flex flex-col items-center gap-2 xl:gap-4">
-          <button type="button" class="btn-primary --yellow">
+          <button type="button" class="vet-btn btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
@@ -258,12 +258,12 @@
         </div>
 
         <div class="flex flex-col items-center gap-2 xl:gap-4">
-          <button type="button" class="btn-primary --yellow">
+          <a href="/contact" class="btn-primary --yellow">
               <span class="btn-primary-icon">
                 <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
               </span>
             <span class="btn-primary-text">Поставити запитання</span>
-          </button>
+          </a>
           <p class="text-center text-dark-main text-body-xs w-full mx-auto max-w-[343px] xl:max-w-full">
             З радістю відповімо та зорієнтуємо
           </p>
@@ -290,7 +290,7 @@
               </div>
               <p class="text-light-main text-body-sm xl:text-body-lg">Гранти для запуску та розвитку ветеранського бізнесу</p>
             </div>
-            <a href="#" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
+            <a href="#" target="_blank" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
               <span class="text-background-dark text-h3 xl:text-h4-lg">
                 Український ветеранський фонд
               </span>
@@ -313,7 +313,7 @@
                 Освітні та грантові ініціативи
               </p>
             </div>
-            <a href="#" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
+            <a href="#" target="_blank" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
               <span class="text-background-dark text-h3 xl:text-h4-lg">
                 Diia.Business
               </span>
@@ -335,7 +335,7 @@
                 Підтримка малого та середнього бізнесу
               </p>
             </div>
-            <a href="#" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
+            <a href="#" target="_blank" class="flex justify-between w-full items-end transition-opacity hover:opacity-75 gap-4">
               <span class="text-background-dark text-h3 xl:text-h4-lg">
                 USAID
               </span>
@@ -529,6 +529,239 @@
   <!-- Footer -->
 </div>
 <!-- /Page -->
+
+
+
+<div class="fixed z-20 inset-0 hidden" id="vet-modal">
+  <div class="absolute inset-0 bg-foreground/90 z-21 vet-close"></div>
+  <div class="w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6">
+    <div class="w-full max-w-[1102px] mx-auto relative bg-gray-hover rounded-lg px-4 pb-4 xl:pb-6 xl:px-14 pt-10 xl:pt-16">
+      <button class="vet-close absolute top-4 right-4 size-12 xl:size-14 flex items-center justify-center cursor-pointer border border-transparent rounded-full hover:border-white">
+        <img src="/img/icons/modal-close.svg"
+             class="size-6"
+             width="24" height="24" alt="">
+      </button>
+
+      <div>
+        <div class="w-full bg-background-dark-card p-4 rounded-lg xl:p-10 max-w-[820px] mx-auto">
+          <form>
+            <div class="vet-form">
+              <div class="vet-form-top">
+                <div class="vet-form-item --required-label">
+                  <p class="vet-form-item-label">Ваш статус</p>
+                  <div class="vet-form-radio">
+                    <div class="sap-checkbox">
+                      <input type="radio" name="status" id="status1">
+                      <label for="status1">Ветеран/ветеранка</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="status" id="status2">
+                      <label for="status2">Член ветеранської команди</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="status" id="status3">
+                      <label for="status3">Планую запуск ветеранського бізнесу</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="vet-form-item --required-label">
+                  <p class="vet-form-item-label">Стадія бізнесу</p>
+                  <div class="vet-form-radio">
+                    <div class="sap-checkbox">
+                      <input type="radio" name="case_status" id="case_status1">
+                      <label for="case_status1">Ідея</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="case_status" id="case_status2">
+                      <label for="case_status2">Запуск</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="case_status" id="case_status3">
+                      <label for="case_status3">Діючий бізнес</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="vet-form-item --required-label">
+                  <p class="vet-form-item-label">Грантовий статус</p>
+                  <div class="vet-form-radio">
+                    <div class="sap-checkbox">
+                      <input type="radio" name="grant_status" id="grant_status1">
+                      <label for="grant_status1">Уже отримав (-ла) грант</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="grant_status" id="grant_status2">
+                      <label for="grant_status2">Планую подаватися на грант</label>
+                    </div>
+                    <div class="sap-checkbox">
+                      <input type="radio" name="grant_status" id="grant_status3">
+                      <label for="grant_status3">У процесі відбору</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input">
+                  <label class="sap-input-label" for="fund_name">
+                    Назва фонду/програми
+                  </label>
+                  <div class="sap-input-inner">
+                    <textarea
+                        class="sap-input-field min-h-18"
+                        type="text"
+                        name="fund_name"
+                        id="fund_name"
+                        placeholder="Вкажіть назву, якщо є"
+                    ></textarea>
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний Email</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.vet-form-top -->
+              <div class="vet-form-bottom">
+                <div class="xl:col-span-full">
+                  <div class="sap-input">
+                    <label class="sap-input-label" for="request_message">
+                      Ваш запит (бажано написати)
+                    </label>
+                    <div class="sap-input-inner">
+                      <textarea
+                          class="sap-input-field"
+                          type="text"
+                          name="message"
+                          id="request_message"
+                          placeholder="Напишіть про задачу тут"
+                      ></textarea>
+                      <button type="button" class="sap-input-clear">
+                        <span class="sr-only">Очистити</span>
+                        <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                      </button>
+                    </div>
+                    <div class="sap-input-error">
+                      <img
+                          src="/img/icons/form-field-warning.svg"
+                          width="16" height="16" alt=""
+                      >
+                      <div class="sap-input-error-text">
+                        <p>Некоректний Email</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input --required-label">
+                  <label class="sap-input-label" for="vet_phone_email">
+                    Номер телефону або email
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="text"
+                        name="phone_email"
+                        id="vet_phone_email"
+                        placeholder="Ім’я"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний номер телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input">
+                  <label class="sap-input-label" for="vet_form_name">
+                    Як можна до вас звертатись
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="text"
+                        name="name"
+                        id="vet_form_name"
+                        placeholder="Ім’я"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний номер телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="xl:col-span-full">
+                  <p class="sap-form-rules">
+                    Натискаючи «Надіслати запит», ви підтверджуєте, що погоджуєтесь з нашими
+                    <a href="#" class="sap-form-rules-link">Правилами конфіденційності</a>
+                    та
+                    <a href="#" class="sap-form-rules-link">Умовами користування</a>
+                  </p>
+                </div>
+                <div class="xl:col-span-full flex justify-center">
+                  <button type="submit" class="btn-primary --yellow">
+                    <span class="btn-primary-icon">
+                      <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+                    </span>
+                    <span class="btn-primary-text">Надіслати запит</span>
+                  </button>
+                </div>
+
+              </div>
+              <!-- /.vet-form-bottom -->
+            </div>
+            <!-- /.vet-form -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const vetModal = document.getElementById('vet-modal')
+    const vetOpenBtn = [...document.querySelectorAll('.vet-btn')]
+    const vetCloseBts = [...vetModal.querySelectorAll('.vet-close')]
+
+    vetOpenBtn.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (vetModal.classList.contains('hidden')) {
+          vetModal.classList.remove('hidden')
+        } else {
+          vetModal.classList.add('hidden')
+        }
+      })
+    })
+
+    vetCloseBts.forEach((button) => {
+      button.addEventListener('click', () => {
+        vetModal.classList.add('hidden')
+      })
+    })
+  })
+</script>
+
 
 <script type="module" src="/src/shared/common.js"></script>
 

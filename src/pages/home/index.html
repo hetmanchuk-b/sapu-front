@@ -97,13 +97,44 @@
              class="h-screen min-h-[590px] max-h-[800px] xl:min-h-[720px] xl:max-h-[1200px]">
       <div class="content px-0 xl:px-0 h-full relative pt-16 xl:pt-33 flex flex-col items-center justify-end">
         <div class="absolute inset-0 z-1">
-          <div class="w-full h-full bg-foreground/20"
+          <div class="w-full h-full bg-foreground/20 relative"
                id="vid-container">
+            <!-- Phone -->
+            <video
+                class="bg-video mobile-video xl:hidden relative z-2"
+                id="vid-mobile-1"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/img/home/hero-bg.jpg"
+                data-mobile
+            >
+              <source src="/video/phone-1.webm" type="video/webm" />
+              <source src="/video/phone-1.mp4" type="video/mp4" />
+            </video>
+            <!-- Desktop -->
+            <div class="video-layer hidden xl:block w-full h-full relative z-2">
+              <video
+                  class="bg-video desktop-video"
+                  id="vid-desktop-1"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="/img/home/hero-bg.jpg"
+                  data-desktop
+              >
+                <source src="/video/lg-1.webm" type="video/webm" />
+                <source src="/video/lg-1.mp4" type="video/mp4" />
+              </video>
+            </div>
             <img src="/img/home/hero-bg.jpg"
-                 class="w-full h-full object-cover"
+                 class="w-full h-full object-cover z-1 absolute left-0 top-0"
                  width="1440"
                  height="810"
                  alt="Sapunova">
+
           </div>
         </div>
         <div class="relative z-3 w-full flex flex-col items-start justify-end py-10 xl:py-18">
@@ -556,7 +587,7 @@
                 </ul>
                 <!-- /.list-primary --no-bullet -->
                 <div class="xl:mt-auto w-full flex justify-center xl:justify-start">
-                  <button type="submit" class="btn-primary --yellow">
+                  <button type="button" class="mentor-btn btn-primary --yellow">
                     <span class="btn-primary-icon">
                       <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
                     </span>
@@ -1586,8 +1617,197 @@
 </div>
 <!-- /Page -->
 
+<div class="fixed z-20 inset-0 hidden" id="mentor-modal">
+  <div class="absolute inset-0 bg-foreground/90 z-21 mentor-close"></div>
+  <div class="w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6">
+    <div class="w-full max-w-[1102px] mx-auto relative bg-gray-hover rounded-lg px-4 pb-4 xl:pb-6 xl:px-14 pt-10 xl:pt-16">
+      <button class="mentor-close absolute top-4 right-4 size-12 xl:size-14 flex items-center justify-center cursor-pointer border border-transparent rounded-full hover:border-white">
+        <img src="/img/icons/modal-close.svg"
+             class="size-6"
+             width="24" height="24" alt="">
+      </button>
+
+      <div class="flex flex-col xl:flex-row gap-8 xl:gap-6">
+        <div class="w-full xl:w-[calc(50%-3*var(--spacing))] grow">
+          <div class="w-full xl:h-full xl:py-10 flex flex-col gap-8 xl:justify-between">
+            <h5 class="section-title-h3">Менторська консультація з Оленою Борисовою</h5>
+
+            <div class="flex flex-col gap-4 w-full xl:items-start">
+              <p class="text-body-sm xl:text-body-lg text-dark-main">
+                Експертний погляд, глибина досвіду та ясність для ваших рішень — у форматі 1,5 години.
+              </p>
+              <div class="bg-background-dark-card rounded-lg section-title-h4 flex items-center justify-center text-center px-4 py-2">
+                Вартість: 500€
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full xl:w-[calc(50%-3*var(--spacing))] grow">
+          <div class="w-full bg-background-dark-card p-4 rounded-lg xl:p-10 max-w-[820px] mx-auto">
+            <form>
+              <div class="flex flex-col gap-4">
+                <div class="sap-input --required-label">
+                  <label class="sap-input-label" for="modal-form-name">
+                    Як можна до вас звертатись
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="text"
+                        name="name"
+                        id="modal-form-name"
+                        placeholder="Ім’я"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний номер телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input --required-label">
+                  <label class="sap-input-label" for="modal-form-phone">
+                    Номер телефону
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="text"
+                        name="name"
+                        id="modal-form-phone"
+                        placeholder="+380"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний номер телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="sap-input --required-label">
+                  <label class="sap-input-label" for="modal-form-email">
+                    Email
+                  </label>
+                  <div class="sap-input-inner">
+                    <input
+                        class="sap-input-field"
+                        type="email"
+                        name="email"
+                        id="modal-form-email"
+                        placeholder="alfaromeo@gmail.com"
+                    >
+                    <button type="button" class="sap-input-clear">
+                      <span class="sr-only">Очистити</span>
+                      <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                    </button>
+                  </div>
+                  <div class="sap-input-error">
+                    <img
+                        src="/img/icons/form-field-warning.svg"
+                        width="16" height="16" alt=""
+                    >
+                    <div class="sap-input-error-text">
+                      <p>Некоректний Email</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="xl:col-span-full">
+                  <div class="sap-input">
+                    <label class="sap-input-label" for="modal-form-message">
+                      Ваш запит (бажано написати)
+                    </label>
+                    <div class="sap-input-inner">
+                      <textarea
+                          class="sap-input-field"
+                          type="text"
+                          name="message"
+                          id="modal-form-message"
+                          placeholder="Напишіть про задачу тут"
+                      ></textarea>
+                      <button type="button" class="sap-input-clear">
+                        <span class="sr-only">Очистити</span>
+                        <img src="/img/icons/input-close.svg" width="24" height="24" alt="">
+                      </button>
+                    </div>
+                    <div class="sap-input-error">
+                      <img
+                          src="/img/icons/form-field-warning.svg"
+                          width="16" height="16" alt=""
+                      >
+                      <div class="sap-input-error-text">
+                        <p>Некоректний Email</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="xl:col-span-full">
+                  <p class="sap-form-rules">
+                    Натискаючи «Надіслати запит», ви підтверджуєте, що погоджуєтесь з нашими
+                    <a href="#" class="sap-form-rules-link">Правилами конфіденційності</a>
+                    та
+                    <a href="#" class="sap-form-rules-link">Умовами користування</a>
+                  </p>
+                </div>
+                <div class="xl:col-span-full flex justify-center xl:justify-start">
+                  <button type="submit" class="btn-primary --yellow">
+                    <span class="btn-primary-icon">
+                      <img src="/img/icons/btn-arrow.svg" width="24" height="24" alt="">
+                    </span>
+                    <span class="btn-primary-text">Надіслати запит</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mentorModal = document.getElementById('mentor-modal')
+    const mentorOpenBtn = [...document.querySelectorAll('.mentor-btn')]
+    const mentorCloseBts = [...mentorModal.querySelectorAll('.mentor-close')]
+
+    mentorOpenBtn.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (mentorModal.classList.contains('hidden')) {
+          mentorModal.classList.remove('hidden')
+        } else {
+          mentorModal.classList.add('hidden')
+        }
+      })
+    })
+
+    mentorCloseBts.forEach((button) => {
+      button.addEventListener('click', () => {
+        mentorModal.classList.add('hidden')
+      })
+    })
+  })
+</script>
+
+
 <script type="module" src="/src/shared/common.js"></script>
 
 <script type="module" src="./main.js"></script>
+
 </body>
 </html>
