@@ -274,11 +274,11 @@
     <!-- /#section-6 -->
     <section id="section-6-phone" class="page-section xl:hidden">
       <div class="content --fit">
-        <h2 class="section-title-h2 mb-4 xl:mb-14" data-scroll data-scroll-speed="-0.05">Що ми Робимо</h2>
+        <h2 class="section-title-h2 mb-4 xl:mb-14">Що ми Робимо</h2>
         <div class="divide-y divide-dark-stroke-hover mb-4 xl:mb-14">
           <div class="flex flex-col xl:flex-row gap-6 pt-4 pb-10 xl:pt-8 xl:pb-12">
-            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4" data-scroll data-scroll-speed="-0.08">Стратегічний аудит</h4>
-            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg" data-scroll data-scroll-speed="0.1">
+            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4">Стратегічний аудит</h4>
+            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg">
               <p class="text-dark-main">Ми аналізуємо:</p>
               <ul class="list-primary [&>li]:border-0">
                 <li>поточний стан бізнесу або бізнес-ідеї</li>
@@ -287,14 +287,14 @@
                 <li>фінансову та операційну логіку</li>
               </ul>
             </div>
-            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg" data-scroll data-scroll-speed="-0.09">
+            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg">
               <p class="text-primary">Результат:</p>
               <p>Чітке розуміння точки старту та ключових обмежень</p>
             </div>
           </div>
           <div class="flex flex-col xl:flex-row gap-6 pt-4 pb-10 xl:pt-8 xl:pb-12">
-            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4" data-scroll data-scroll-speed="-0.08">Стратегія розвитку</h4>
-            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg" data-scroll data-scroll-speed="0.1">
+            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4">Стратегія розвитку</h4>
+            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg">
               <p class="text-dark-main">Разом із вами ми:</p>
               <ul class="list-primary [&>li]:border-0">
                 <li>визначаємо пріорітети зростання</li>
@@ -303,14 +303,14 @@
                 <li>відсікаємо неефективні напрямки</li>
               </ul>
             </div>
-            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg" data-scroll data-scroll-speed="-0.09">
+            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg">
               <p class="text-primary">Результат:</p>
               <p>Зрозумілий стратегічний план дій на 6-12 місяців</p>
             </div>
           </div>
           <div class="flex flex-col xl:flex-row gap-6 pt-4 pb-10 xl:pt-8 xl:pb-12">
-            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4" data-scroll data-scroll-speed="-0.08">Робота з грантовим контекстом </h4>
-            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg xl:pr-4" data-scroll data-scroll-speed="0.1">
+            <h4 class="section-title-h4 xl:grow xl:w-full xl:pr-4">Робота з грантовим контекстом </h4>
+            <div class="flex flex-col xl:grow xl:w-full xl:gap-6 text-body-md xl:text-body-lg xl:pr-4">
               <p class="text-dark-main">Ми інтегруємо:</p>
               <ul class="list-primary [&>li]:border-0">
                 <li>бізнес стратегію в умови грантової програми</li>
@@ -319,7 +319,7 @@
                 <li>стратегічні рішення в рамках фінансування</li>
               </ul>
             </div>
-            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg" data-scroll data-scroll-speed="-0.09">
+            <div class="flex flex-col xl:grow xl:w-full gap-4 xl:gap-6 text-body-md xl:text-body-lg">
               <p class="text-primary">Результат:</p>
               <p>Стратегія, що відповідає умовам гранту та працює на розвиток бізнесу</p>
             </div>
@@ -603,9 +603,9 @@
 
 
 
-<div class="fixed z-20 inset-0 hidden" id="vet-modal">
+<div class="fixed z-20 inset-0 hidden js-modal" id="vet-modal">
   <div class="absolute inset-0 bg-foreground/90 z-21 vet-close"></div>
-  <div class="w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6">
+  <div class="vet-modal-container w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6">
     <div class="w-full max-w-[1102px] mx-auto relative bg-gray-hover rounded-lg px-4 pb-4 xl:pb-6 xl:px-14 pt-10 xl:pt-16">
       <button class="vet-close absolute top-4 right-4 size-12 xl:size-14 flex items-center justify-center cursor-pointer border border-transparent rounded-full hover:border-white">
         <img src="/img/icons/modal-close.svg"
@@ -738,7 +738,7 @@
                         type="text"
                         name="phone_email"
                         id="vet_phone_email"
-                        placeholder="Ім’я"
+                        placeholder="example@mail.com"
                     >
                     <button type="button" class="sap-input-clear">
                       <span class="sr-only">Очистити</span>
