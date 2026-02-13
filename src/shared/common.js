@@ -5,8 +5,61 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {InertiaPlugin} from "gsap/InertiaPlugin";
 import LocomotiveScroll from 'locomotive-scroll';
 
-const scroll = new LocomotiveScroll();
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+});
 gsap.registerPlugin(Draggable, InertiaPlugin, ScrollTrigger, SplitText)
+
+const vetModal = document.getElementById('vet-modal')
+if (vetModal) {
+  const vetOpenBtn = [...document.querySelectorAll('.vet-btn')]
+  const vetCloseBts = [...vetModal.querySelectorAll('.vet-close')]
+
+  vetOpenBtn.forEach((button) => {
+    button.addEventListener('click', () => {
+      if (vetModal.classList.contains('hidden')) {
+        vetModal.classList.remove('hidden')
+        scroll.stop()
+      } else {
+        vetModal.classList.add('hidden')
+        scroll.start()
+      }
+    })
+  })
+
+  vetCloseBts.forEach((button) => {
+    button.addEventListener('click', () => {
+      vetModal.classList.add('hidden')
+      scroll.start()
+    })
+  })
+}
+
+
+const mentorModal = document.getElementById('mentor-modal')
+if (mentorModal) {
+  const mentorOpenBtn = [...document.querySelectorAll('.mentor-btn')]
+  const mentorCloseBts = [...mentorModal.querySelectorAll('.mentor-close')]
+
+  mentorOpenBtn.forEach((button) => {
+    button.addEventListener('click', () => {
+      if (mentorModal.classList.contains('hidden')) {
+        scroll.stop()
+        mentorModal.classList.remove('hidden')
+      } else {
+        scroll.start()
+        mentorModal.classList.add('hidden')
+      }
+    })
+  })
+
+  mentorCloseBts.forEach((button) => {
+    button.addEventListener('click', () => {
+      scroll.start()
+      mentorModal.classList.add('hidden')
+    })
+  })
+}
 
 // ================================================
 //   Header
@@ -23,6 +76,14 @@ headerTrigger.addEventListener('click', () => {
     header.classList.add('mob-open');
   }
 });
+
+const navLinks = document.querySelectorAll('.nav-link')
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    scroll.start()
+    header.classList.remove('mob-open');
+  })
+})
 
 const fixedHeaderTween = gsap.from('#header', {
   yPercent: -100,

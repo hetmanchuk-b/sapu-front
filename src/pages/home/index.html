@@ -12,7 +12,7 @@
 <body>
 
 <!-- Page -->
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen" data-scroll-container>
   <!-- Header -->
   <header id="header" class="header-wrap group">
     <div class="header-bg"></div>
@@ -92,7 +92,7 @@
   <!-- /Header -->
 
   <!-- Main -->
-  <main class="grow w-full">
+  <main class="grow w-full overflow-hidden">
     <section id="section-hero"
              class="h-screen min-h-[590px] max-h-[800px] xl:min-h-[720px] xl:max-h-[1200px]">
       <div class="content px-0 xl:px-0 h-full relative pt-16 xl:pt-33 flex flex-col items-center justify-end">
@@ -1619,7 +1619,7 @@
 
 <div class="fixed z-20 inset-0 hidden" id="mentor-modal">
   <div class="absolute inset-0 bg-foreground/90 z-21 mentor-close"></div>
-  <div class="w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6">
+  <div class="w-full h-full relative z-22 overflow-auto pt-10 pb-5 xl:pt-20 xl:pb-10 px-6" data-lenis-prevent>
     <div class="w-full max-w-[1102px] mx-auto relative bg-gray-hover rounded-lg px-4 pb-4 xl:pb-6 xl:px-14 pt-10 xl:pt-16">
       <button class="mentor-close absolute top-4 right-4 size-12 xl:size-14 flex items-center justify-center cursor-pointer border border-transparent rounded-full hover:border-white">
         <img src="/img/icons/modal-close.svg"
@@ -1780,29 +1780,6 @@
     </div>
   </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const mentorModal = document.getElementById('mentor-modal')
-    const mentorOpenBtn = [...document.querySelectorAll('.mentor-btn')]
-    const mentorCloseBts = [...mentorModal.querySelectorAll('.mentor-close')]
-
-    mentorOpenBtn.forEach((button) => {
-      button.addEventListener('click', () => {
-        if (mentorModal.classList.contains('hidden')) {
-          mentorModal.classList.remove('hidden')
-        } else {
-          mentorModal.classList.add('hidden')
-        }
-      })
-    })
-
-    mentorCloseBts.forEach((button) => {
-      button.addEventListener('click', () => {
-        mentorModal.classList.add('hidden')
-      })
-    })
-  })
-</script>
 
 
 <script type="module" src="/src/shared/common.js"></script>
